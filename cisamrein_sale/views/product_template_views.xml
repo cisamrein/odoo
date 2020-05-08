@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="product_template_form" model="ir.ui.view">
+			<field name="name">product.template.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='sales']/group[@name='sale']" position="before">
+					<field name="customer_reference_ids">
+						<tree string="Custormer reference" editable="bottom">
+							<field name="partner_id"/>
+							<field name="name"/>
+						</tree>
+					</field>
+				</xpath>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

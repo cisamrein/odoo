@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cisamrein_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-08 09:34+0000\n"
+"PO-Revision-Date: 2020-05-08 09:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_product__customer_reference_ids
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_template__customer_reference_ids
+msgid "Customer Reference"
+msgstr "Référence client"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.product_customer_ref_form
+msgid "Customer reference"
+msgstr "Référence client"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.product_customer_ref_tree
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.product_template_form
+msgid "Custormer reference"
+msgstr "Référence client"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__display_name
+msgid "Display Name"
+msgstr "Référence"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__id
+msgid "ID"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__product_tmpl_id
+msgid "Product Tmpl"
+msgstr "Article"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__name
+msgid "Reference"
+msgstr "Référence client"
+
+#. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_product_customer_ref
+msgid "Reference of product for customer"
+msgstr "Référence des produits pour les clients"
