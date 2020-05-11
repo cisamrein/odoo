@@ -27,6 +27,6 @@
         # 'security/ir.model.access.csv',
         # 'data/config_data.xml',
         # 'views/views.xml',
-        # 'views/templates.xml',
+        'views/view_list_price_supplier.xml',
     ],
 }
