@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CIS AMREIN App",
+    'name': "CIS AMREIN Purchase",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,13 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['cisamrein_base', 'cisamrein_product', 'cisamrein_stock', 'cisamrein_sale', 'cisamrein_purchase', 'repair'],
-    'sequence': 1,
+    'depends': ['base', 'purchase', 'cisamrein_product'],
+
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'data/config_data.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
     ],
-    'application': True,
 }
