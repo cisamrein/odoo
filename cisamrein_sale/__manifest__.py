@@ -20,13 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_management', 'cisamrein_product'],
+    'depends': ['sale_management', 'cisamrein_stock'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/product_customer_ref_views.xml',
         'views/product_template_views.xml',
-        'views/templates.xml',
+        'views/stock_picking_views.xml',
     ]
 }
