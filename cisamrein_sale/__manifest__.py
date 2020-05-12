@@ -28,5 +28,6 @@
         'views/product_customer_ref_views.xml',
         'views/product_template_views.xml',
         'views/stock_picking_views.xml',
+        'views/sale_order_views.xml',
     ]
 }
