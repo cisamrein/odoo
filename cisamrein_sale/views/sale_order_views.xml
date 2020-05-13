@@ -12,6 +12,9 @@
 						<field name="include_document"/>
 					</group>
 				</xpath>
+				<xpath expr="//field[@name='client_order_ref']" position="after">
+				    <field name="cmd_customer_ref"/>
+				</xpath>
 			</field>
 		</record>
 	

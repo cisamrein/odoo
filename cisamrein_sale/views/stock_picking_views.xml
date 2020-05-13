@@ -21,6 +21,9 @@
 						<field name="include_document"/>
 					</group>
 				</xpath>
+				<xpath expr="//field[@name='origin']" position="after">
+				    <field name="cmd_customer_ref"/>
+				</xpath>
 			</field>
 		</record>
 	

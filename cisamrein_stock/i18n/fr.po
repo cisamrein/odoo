@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-12 08:08+0000\n"
-"PO-Revision-Date: 2020-05-12 08:08+0000\n"
+"POT-Creation-Date: 2020-05-13 12:57+0000\n"
+"PO-Revision-Date: 2020-05-13 12:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,11 +31,40 @@ msgid "Material Origin"
 msgstr "Origine matériel"
 
 #. module: cisamrein_stock
+#: model:ir.model.fields,field_description:cisamrein_stock.field_stock_picking__other_information
+msgid "Other Information"
+msgstr "Autres renseignements"
+
+#. module: cisamrein_stock
+#: model_terms:ir.ui.view,arch_db:cisamrein_stock.stock_picking_form
+msgid "Other information"
+msgstr "Autres renseignements"
+
+#. module: cisamrein_stock
+#: model:ir.model.fields,field_description:cisamrein_stock.field_stock_picking__particular_information
+msgid "Particular Information"
+msgstr "Renseigements particuliers"
+
+#. module: cisamrein_stock
 #: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__product_code
 msgid "Product code"
 msgstr "Code article"
 
 #. module: cisamrein_stock
+#: model_terms:ir.ui.view,arch_db:cisamrein_stock.stock_picking_form
+msgid ""
+"Specific information of the supplies delivered, in particular the reference "
+"to the exemptions granted"
+msgstr ""
+"Renseignements particuliers aux fournitures livrées, notamment la référence"
+"des dérogations accordées"
+
+#. module: cisamrein_stock
 #: model:ir.model,name:cisamrein_stock.model_stock_move
 msgid "Stock Move"
 msgstr "Stock déplacer"
+
+#. module: cisamrein_stock
+#: model:ir.model,name:cisamrein_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
