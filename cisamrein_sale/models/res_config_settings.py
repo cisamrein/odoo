@@ -13,7 +13,7 @@ class ResCompany(models.Model):
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    terms_sales = fields.Text(help='Default purchase terms and conditions', related='company_id.terms_sales',
+    terms_sales = fields.Text(help='Default sales terms and conditions', related='company_id.terms_sales',
                                  translate=True, readonly=False)
     included_doc = fields.Text(related='company_id.included_doc', translate=True, readonly=False)
     price_condition = fields.Text(related='company_id.price_condition', readonly=False, translate=True)
