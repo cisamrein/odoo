@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="sale_order_form" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='note']" position="after">
+					<group colspan="12">
+						<field name="include_document"/>
+					</group>
+					<group colspan="12">
+						<field name="price_condition"/>
+					</group>
+				</xpath>
+				<xpath expr="//field[@name='client_order_ref']" position="after">
+				    <field name="cmd_customer_ref"/>
+				</xpath>
+				<xpath expr="//group[@name='sales_person']" position="replace">
+					<!-- Add your fields or attributes here -->
+					<group name="sales_person" string="Sales">
+						<field name="team_id" kanban_view_ref="505" options="{'no_create': True}"/>
+						<field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+						<field name="require_signature"/>
+						<field name="require_payment"/>
+						<field name="reference" readonly="1" attrs="{'invisible': [('reference', '=', False)]}"/>
+						<field name="client_order_ref"/>
+					</group>
+				</xpath>
+				<xpath expr="//page[@name='customer_signature']" position="replace">
+					<!-- Add your fields or attributes here -->
+					<page string="Customer Signature" name="customer_signature">
+                            <group>
+								<group>
+									<field name="user_id"/>
+									<field name="signature" widget="image"/>
+
+								</group>
+								<group>
+									<field name="signed_by_2"/>
+									<field name="signature_2" widget="image"/>
+                            	</group>
+							</group>
+					</page>
+				</xpath>
+				<xpath expr="//field[@name='client_order_ref']" position="attributes">
+					<!-- Add your fields or attributes here -->
+					<attribute name="string">RQ Reference</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
+					<!-- Add your fields or attributes here -->
+					<field name="item"/>
+				</xpath>
+				<xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+					<!-- Add your fields or attributes here -->
+					<field name="ref_int"/>
+					<field name="customer_reference"/>
+				</xpath>
+				<xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+					<!-- Add your fields or attributes here -->
+					<attribute name="string">Product code</attribute>
+				</xpath>
+			</field>
+		</record>
+	
+	</data>
+</odoo>

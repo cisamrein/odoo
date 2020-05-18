@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="stock_picking_form" model="ir.ui.view">
+			<field name="name">stock.picking.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='extra']" position="inside">
+				    <field name="other_information" placeholder="Other information"/>
+				    <field name="particular_information"
+				           placeholder="Specific information of the supplies delivered, in particular the reference to the exemptions granted"/>
+				</xpath>
+			</field>
+		</record>
+	
+	</data>
+</odoo>
