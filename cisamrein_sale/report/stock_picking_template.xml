@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_delivery_inherit" inherit_id="stock.report_delivery_document">
+			<xpath expr="//table[@name='stock_move_line_table']/thead/tr/th[1]" position="before">
+				<th class="text-center">
+					<strong>Item</strong>
+				</th>
+			</xpath>
+			<xpath expr="//table[@name='stock_move_line_table']/tbody/tr/td[1]" position="before">
+				<td>
+					<span t-field="move_line.move_id.item"/>
+				</td>
+			</xpath>
+			<xpath expr="//th[@name='lot_serial']" position="before">
+				<th class="text-center">
+					<strong>Internal Reference</strong>
+				</th>
+				<th class="text-center">
+					<t t-if="o.picking_type_code != 'incoming'">
+						<strong>Customer Ref</strong>
+					</t>
+					<t t-else="">
+						<strong>Supplier Ref</strong>
+					</t>
+				</th>
+				<th class="text-center">
+					<strong>Description</strong>
+				</th>
+				<t t-if="o.picking_type_code != 'incoming'">
+					<th class="text-center">
+						<strong>Material origin</strong>
+					</th>
+				</t>
+			</xpath>
+			<xpath expr="//td[@t-if='has_serial_number and move_line.lot_name']" position="before">
+				<td class="text-center">
+					<span t-field="move_line.move_id.product_default_code"/>
+				</td>
+				<td class="text-center">
+					<t t-if="o.picking_type_code != 'incoming'">
+						<span t-field="move_line.move_id.customer_ref"/>
+					</t>
+					<t t-else="">
+						<span t-field="move_line.move_id.ref_supplier"/>
+					</t>
+				</td>
+				<td class="text-center">
+					<span t-field="move_line.move_id.product_description"/>
+				</td>
+				<t t-if="o.picking_type_code != 'incoming'">
+					<td class="text-center">
+						<span t-field="move_line.move_id.material_origin"/>
+					</td>
+				</t>
+			</xpath>
+		</template>
+		<template id="report_picking_inherit" inherit_id="stock.report_picking">
+			<xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']/thead/tr/th[1]" position="before">
+				<th>
+					<strong>Item</strong>
+				</th>
+			</xpath>
+			<xpath expr="//t[@t-foreach='move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)']/tr/td[1]" position="before">
+				<td>
+					<span t-field="ml.move_id.item"/>
+				</td>
+			</xpath>
+			<xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']/thead/tr/th[2]" position="before">
+				<th class="text-center">
+					<strong>Internal Reference</strong>
+				</th>
+				<th class="text-center">
+					<t t-if="o.picking_type_code != 'incoming'">
+						<strong>Customer Ref</strong>
+					</t>
+					<t t-else="">
+						<strong>Supplier Ref</strong>
+					</t>
+				</th>
+				<th class="text-center">
+					<strong>Description</strong>
+				</th>
+				<t t-if="o.picking_type_code != 'incoming'">
+					<th class="text-center">
+						<strong>Material origin</strong>
+					</th>
+				</t>
+			</xpath>
+			<xpath expr="//t[@t-foreach='move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)']/tr/td[2]" position="before">
+				<td class="text-center">
+					<span t-field="ml.move_id.product_default_code"/>
+				</td>
+				<td class="text-center">
+					<t t-if="o.picking_type_code != 'incoming'">
+						<span t-field="ml.move_id.customer_ref"/>
+					</t>
+					<t t-else="">
+						<span t-field="ml.move_id.ref_supplier"/>
+					</t>
+				</td>
+				<td class="text-center">
+					<span t-field="ml.move_id.product_description"/>
+				</td>
+				<t t-if="o.picking_type_code != 'incoming'">
+					<td class="text-center">
+						<span t-field="ml.move_id.material_origin"/>
+					</td>
+				</t>
+			</xpath>
+		</template>
+	</data>
+</odoo>

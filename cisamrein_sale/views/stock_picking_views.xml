@@ -10,9 +10,8 @@
 					<field name="item"/>
 					<field name="product_description"/>
 					<field name="product_default_code"/>
-					<field name="customer_ref" invisible="context.get('default_picking_type_id') == 1" optional="hide"/>
-					<field name="material_origin" invisible="context.get('default_picking_type_id') == 1" optional="hide"/>
-					<!--<field name="product_description_sale"/>-->
+					<field name="customer_ref" attrs="{'column_invisible': [('parent.picking_type_code', '!=', 'outgoing')]}"/>
+					<field name="material_origin" attrs="{'column_invisible': [('parent.picking_type_code', '!=', 'outgoing')]}"/>
 				</xpath>
 				<xpath expr="//field[@name='move_ids_without_package']" position="after">
 					<group>
