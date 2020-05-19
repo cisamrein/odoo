@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="res_config_settings" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.purchase</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='sale_management']" position="inside">
+                    <!-- Add your fields or attributes here -->
+                    <h2>Default configurations on Orders</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             title="This default configuration is applied to any new order created">
+                            <div class="o_setting_right_pane">
+                                <label for="terms_sales"/>
+                                <div class="text-muted">
+                                    Default terms and condition in sales orders forms
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="terms_sales" class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="included_doc"/>
+                                <div class="text-muted">
+                                    Included document in sales orders forms
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="included_doc" class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Price condition</span>
+                                <div class="text-muted">
+                                       Default price condition when create sale order
+                                </div>
+                                <div class="text-muted">
+                                    <field name="price_condition"/>
+                                </div>
+                            </div>
+                        </div>
+				    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -7,14 +7,12 @@ class PurchaseOrder(models.Model):
 
     notes = fields.Text(default=lambda self: self.env.user.company_id.terms_purchase, translate=True)
 
-    signature_1 = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True,
+    signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False, attachment=True,
                                max_width=1024, max_height=1024)
-    signed_by_1 = fields.Many2one('res.users', string='Responsible', help='Name of the person that signed the PO')
-    # signed_on_1 = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
 
-    signature_2 = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True,
+    signature_2 = fields.Image('Director Signature', help='Signature received through the portal.', copy=False, attachment=True,
                                max_width=1024, max_height=1024)
-    signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO.')
+    signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO')
 
     # signed_on_2 = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
 
@@ -38,7 +36,7 @@ class PurchaseOrder(models.Model):
         for rec in self:
             current_sequence = 1
             for line in rec.order_line:
-                line.item = current_sequence
+                line.item = str(current_sequence)
                 current_sequence += 1
 
     def copy(self, default=None):
@@ -49,9 +47,25 @@ class PurchaseOrder(models.Model):
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
 
-    item = fields.Integer(default=0, copy=True)
+    item = fields.Char(default="1", copy=True)
+    ref_int = fields.Char(related="product_id.default_code")
+    ref_supplier = fields.Char()
 
     @api.onchange("product_id")
     def change_item(self):
         if not self.product_id:
             self.order_id._reset_sequence()
+
+    def _get_product_purchase_description(self, product_lang):
+        self.ensure_one()
+        var = ""
+        if len(product_lang.mapped('seller_ids')) >= 1:
+            res = product_lang.mapped('seller_ids').filtered(lambda x: x.name == self.order_id.partner_id)
+            if res:
+                var = res.product_code if len(res) == 1 else res[-1].product_code
+        self.ref_supplier = var
+        name = " "
+
+        if product_lang.description_purchase:
+            name = product_lang.description_purchase
+        return name

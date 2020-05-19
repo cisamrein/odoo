@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-13 13:43+0000\n"
-"PO-Revision-Date: 2020-05-13 13:43+0000\n"
+"POT-Creation-Date: 2020-05-19 08:03+0000\n"
+"PO-Revision-Date: 2020-05-19 08:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "<span class=\"o_form_label\">Price condition</span>"
+msgstr "Conditions des prix"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,help:cisamrein_sale.field_stock_move__product_description_sale
@@ -30,6 +35,16 @@ msgid "Cmd Customer Ref"
 msgstr "Référence commande client"
 
 #. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__create_uid
 msgid "Created by"
 msgstr ""
@@ -42,14 +57,20 @@ msgstr ""
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__partner_id
 msgid "Customer"
-msgstr ""
+msgstr "Client"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_product__customer_reference_ids
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_template__customer_reference_ids
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order_line__customer_reference
 #: model:ir.model.fields,field_description:cisamrein_sale.field_stock_move__customer_ref
 msgid "Customer Reference"
 msgstr "Référence client"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
+msgid "Customer Signature"
+msgstr "Signature"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.product_customer_ref_form
@@ -63,6 +84,26 @@ msgid "Custormer reference"
 msgstr "Référence client"
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "Default configurations on Orders"
+msgstr "Configuration sur les documents"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "Default price condition when create sale order"
+msgstr "Condition de prix par défaut lors de la création du devis"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,help:cisamrein_sale.field_res_config_settings__terms_sales
+msgid "Default sales terms and conditions"
+msgstr "Termes et conditions de ventes par défaut"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "Default terms and condition in sales orders forms"
+msgstr "Termes et conditions de ventes par défaut"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__display_name
 msgid "Display Name"
 msgstr "Référence"
@@ -73,25 +114,63 @@ msgid "ID"
 msgstr ""
 
 #. module: cisamrein_sale
-#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__include_document
 #: model:ir.model.fields,field_description:cisamrein_sale.field_stock_picking__include_document
 msgid "Include Document"
 msgstr "Documents inclus"
 
 #. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__included_doc
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_config_settings__included_doc
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__include_document
+msgid "Included Doc"
+msgstr "Documents inclus"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "Included document in sales orders forms"
+msgstr "Document inclus sur le devis"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order_line__ref_int
+msgid "Internal Reference"
+msgstr "Référence interne"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order_line__item
+msgid "Item"
+msgstr "Item"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière Modification le"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière Modification par"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Modifié le"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__signed_by_2
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,help:cisamrein_sale.field_sale_order__signed_by_2
+msgid "Name of the person that signed the SO"
+msgstr "Nom de la personne qui doit signé la commande"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__price_condition
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_config_settings__price_condition
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__price_condition
+msgid "Price Condition"
+msgstr "Conditions de prix"
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_product_template
@@ -104,6 +183,16 @@ msgid "Product Tmpl"
 msgstr "Article"
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
+msgid "Product code"
+msgstr "Code article"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
+msgid "RQ Reference"
+msgstr "Référence RQ"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__name
 msgid "Reference"
 msgstr "Référence client"
@@ -112,6 +201,16 @@ msgstr "Référence client"
 #: model:ir.model,name:cisamrein_sale.model_product_customer_ref
 msgid "Reference of product for customer"
 msgstr "Référence des produits pour les clients"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__signature_2
+msgid "Responsible Signature"
+msgstr "Signature du Responsable"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
+msgid "Sales"
+msgstr "Ventes"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_stock_move__product_description_sale
@@ -124,9 +223,35 @@ msgid "Sales Order"
 msgstr "Bon de commande"
 
 #. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,help:cisamrein_sale.field_sale_order__signature_2
+msgid "Signature received through the portal."
+msgstr ""
+
+#. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_stock_move
 msgid "Stock Move"
 msgstr "Stock déplacer"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__terms_sales
+#: model:ir.model.fields,field_description:cisamrein_sale.field_res_config_settings__terms_sales
+msgid "Terms Sales"
+msgstr "Termes et  conditions"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__note
+msgid "Terms and conditions"
+msgstr "Conditions de vente"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
+msgid "This default configuration is applied to any new order created"
+msgstr "Cette configuration est appliqué par défaut aux nouveaux commandes de Ventes"
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_stock_picking

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		
 		<record id="stock_picking_form" model="ir.ui.view">
 			<field name="name">stock.picking.form</field>
 			<field name="model">stock.picking</field>
@@ -11,9 +10,8 @@
 					<field name="item"/>
 					<field name="product_description"/>
 					<field name="product_default_code"/>
-					<field name="customer_ref"/>
-					<field name="material_origin"/>
-					<field name="material_origin"/>
+					<field name="customer_ref" invisible="context.get('default_picking_type_id') == 1" optional="hide"/>
+					<field name="material_origin" invisible="context.get('default_picking_type_id') == 1" optional="hide"/>
 					<!--<field name="product_description_sale"/>-->
 				</xpath>
 				<xpath expr="//field[@name='move_ids_without_package']" position="after">
