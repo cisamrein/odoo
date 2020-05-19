@@ -28,6 +28,6 @@
         'data/ir_sequence_data.xml',
         'views/view_list_price_supplier.xml',
         'views/view_config_settings.xml',
-        'views/view_purchase_order.xml'
+        'views/view_purchase_order.xml',
     ],
 }
