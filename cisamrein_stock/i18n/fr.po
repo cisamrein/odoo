@@ -46,8 +46,8 @@ msgid "Particular Information"
 msgstr "Renseigements particuliers"
 
 #. module: cisamrein_stock
-#: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__product_code
-msgid "Product code"
+#: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__product_id
+msgid "Product"
 msgstr "Code article"
 
 #. module: cisamrein_stock

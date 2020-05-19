@@ -7,7 +7,7 @@ class StockMoveInherit(models.Model):
     _inherit = 'stock.move'
 
     item = fields.Char()
-    product_code = fields.Char(related='product_id.name', string="Product code")
+    product_description = fields.Text(related='product_id.description_sale', string="Description")
     product_default_code = fields.Char(related='product_id.default_code', string="Internal Reference")
     material_origin = fields.Many2one('res.country', compute='_compute_material_origin')
 

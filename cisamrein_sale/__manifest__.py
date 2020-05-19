@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_management', 'cisamrein_stock'],
+    'depends': ['web', 'sale_management', 'cisamrein_stock'],
 
     # always loaded
     'data': [
@@ -29,5 +29,8 @@
         'views/product_template_views.xml',
         'views/stock_picking_views.xml',
         'views/sale_order_views.xml',
+        'report/conformity_statement_report.xml',
+        'report/conformity_statement_template.xml',
     ]
 }
+
