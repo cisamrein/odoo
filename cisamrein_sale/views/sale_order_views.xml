@@ -15,9 +15,6 @@
 						<field name="price_condition"/>
 					</group>
 				</xpath>
-				<xpath expr="//field[@name='client_order_ref']" position="after">
-				    <field name="cmd_customer_ref"/>
-				</xpath>
 				<xpath expr="//group[@name='sales_person']" position="replace">
 					<!-- Add your fields or attributes here -->
 					<group name="sales_person" string="Sales">
@@ -27,6 +24,7 @@
 						<field name="require_payment"/>
 						<field name="reference" readonly="1" attrs="{'invisible': [('reference', '=', False)]}"/>
 						<field name="client_order_ref"/>
+						<field name="cmd_customer_ref"/>
 					</group>
 				</xpath>
 				<xpath expr="//page[@name='customer_signature']" position="replace">
