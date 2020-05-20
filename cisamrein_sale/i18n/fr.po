@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-19 16:11+0000\n"
-"PO-Revision-Date: 2020-05-19 16:11+0000\n"
+"POT-Creation-Date: 2020-05-20 07:21+0000\n"
+"PO-Revision-Date: 2020-05-20 07:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -206,21 +206,19 @@ msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Customer Ref</strong>"
 msgstr "<strong>Référence client</strong>"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
-msgid "<strong>Supplier Ref</strong>"
-msgstr "<strong>Référence fournisseur</strong>"
-
-#. module: cisamrein_sale
-#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Description</strong>"
 msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Internal Reference</strong>"
 msgstr "<strong>Référence interne</strong>"
 
@@ -237,16 +235,15 @@ msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Material origin</strong>"
 msgstr "<strong>Origine matériel</strong>"
 
 #. module: cisamrein_sale
-#: model:ir.model.fields,help:cisamrein_sale.field_stock_move__product_description_sale
-msgid ""
-"A description of the Product that you want to communicate to your customers."
-" This description will be copied to every Sales Order, Delivery Order and "
-"Customer Invoice/Credit Note"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
+msgid "<strong>Supplier Ref</strong>"
+msgstr "<strong>Référence fournisseur</strong>"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__cmd_customer_ref
@@ -273,12 +270,12 @@ msgstr "Déclaration de conformité"
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__partner_id
@@ -457,11 +454,6 @@ msgid "Sales"
 msgstr "Ventes"
 
 #. module: cisamrein_sale
-#: model:ir.model.fields,field_description:cisamrein_sale.field_stock_move__product_description_sale
-msgid "Sales Description"
-msgstr "Description"
-
-#. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_sale_order
 msgid "Sales Order"
 msgstr "Bon de commande"
@@ -474,7 +466,7 @@ msgstr "Ligne de bons de commande"
 #. module: cisamrein_sale
 #: model:ir.model.fields,help:cisamrein_sale.field_sale_order__signature_2
 msgid "Signature received through the portal."
-msgstr ""
+msgstr "Signature reçue via le portail."
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_stock_move
