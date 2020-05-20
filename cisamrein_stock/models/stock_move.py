@@ -18,6 +18,15 @@ class StockMoveInherit(models.Model):
                                                                                  rec.product_id.product_tmpl_id.id)], limit=1)
             rec.material_origin = product_supplierinfo_id.name.country_id.id
 
+    def _prepare_procurement_values(self):
+        """
+        Pass the item value for several steps of picking
+        """
+        self.ensure_one()
+        res = super(StockMoveInherit, self)._prepare_procurement_values()
+        res['item'] = self.item
+        return res
+
     @api.model
     def create(self, values):
         # Add code here

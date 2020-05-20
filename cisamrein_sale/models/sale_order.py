@@ -48,3 +48,13 @@ class SaleOrderLine(models.Model):
 
         self.customer_reference = var
         return " " + product.get_product_multiline_description_sale()
+
+    def _prepare_procurement_values(self, group_id=False):
+        """
+        Add item into values to pass
+        :return:
+        """
+        values = super(SaleOrderLine, self)._prepare_procurement_values(group_id)
+        self.ensure_one()
+        values['item'] = self.item
+        return values
