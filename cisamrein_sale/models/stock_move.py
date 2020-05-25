@@ -7,7 +7,6 @@ class StockMoveInherit(models.Model):
     _inherit = 'stock.move'
 
     customer_ref = fields.Char(compute='_compute_customer_ref', string="Customer Reference")
-    product_description_sale = fields.Text(related='product_id.description_sale')
 
     @api.depends('product_id', 'picking_id.partner_id')
     def _compute_customer_ref(self):

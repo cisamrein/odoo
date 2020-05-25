@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<template id="conformity_statement">
+			<t t-call="web.basic_layout">
+				<style>
+					body {
+					font-size: 17px;
+					font-family: Arial,sans-serif;
+					font-weight:normal;
+					border: 1px #000000;
+					}
+					.blue-text {
+					color: #0402FD;
+					}
+					.thin-text{
+					font-size: 13px;
+					}
+					.vertical-center{
+					vertical-align: middle;
+					}
+					.normal-text{
+					font-size: 16px;
+					}
+				</style>
+				<div class="page">
+					<t t-foreach="docs" t-as="o">
+						<t>
+							<div class="page">
+								<div class="oe_structure"/>
+								<div class="row">
+									<div class="col-12">
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td>
+														<span class="thin-text">Fournisseur</span>
+														<br/>
+														<span class="thin-text">Supplier</span>
+														<br/>
+														<span class="thin-text">Lieferant</span>
+														<br/>
+													</td>
+													<td>
+														<span class="o_company_logo" t-field="o.company_id.partner_id.image_128"
+														      t-options="{'widget': 'image'}"
+														      t-att-alt="'Logo of %s' % o.company_id.name" t-att-title="o.company_id.name"/>
+													</td>
+													<td rowspan="2" colspan="4" class="text-center vertical-center" style="vertical-align: middle;">
+														<span style="font-size:20px; ">DECLARATION DE CONFORMITE</span>
+														<br/>
+														
+														<span class="thin-text">ETABLI PAR L&#39;INDUSTRIEL FOURNISSEUR CONFORMEMENT AUX NORMES NFL
+															00-015C &amp;
+															ISO/CEI 17050
+														</span>
+														<br/>
+														
+														<span style="font-style:italic; font-size:20px; ">STATEMENT OF CONFORMITY</span>
+														<br/>
+														
+														<span class="thin-text">ESTABLISHED BY tdE INDUSTRIAL SUPPLIER CONFORMING
+															TO STANDARD
+															NFL 00-015C&amp;ISO/CEI 17050
+														</span>
+														<br/>
+														
+														<span style="font-size:20px; ">ÜBEREINSTIMMUNGSERKLÄRUNG</span>
+														<br/>
+														
+														<span class="thin-text">DER VOM LIEFERWERK ENTSPRECHEND DER NORM NFL 00-015C &amp; ISO/CEI
+															17050 ERSTELLT
+															WURDE
+														</span>
+														<br/>
+													</td>
+													<td width="20%" colspan="2" class="normal-text">
+														<span>Déclaration/Statement/Erklärung</span>
+														<br/>
+														N°:
+														<span class="blue-text">17-1143.051</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2" width="20%" class="text-center">
+														<span class="thin-text">Etablissement / Plant / Betrieb</span>
+														<br/>
+														COURBEVOIE
+														<br/>
+														<span class="thin-text">France / Frankreich</span>
+													</td>
+													<td class="normal-text" style="vertical-align: middle;">
+														Nombre de feuilles
+														<br/>
+														Number of pages
+														<br/>
+														Seitenzahl
+													</td>
+													<td>
+														<span class="blue-text" style="vertical-align: middle;">1</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="3" width="45%" style="border-right-style:dashed;">
+														<span>Raison sociale du client, usine</span>
+														<br/>
+														<span style="font-style:italic;">Customer, trade name, factory</span>
+														<br/>
+														<span>Kunde / Firma, Werk</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="border-left-style:dashed;">
+														<!--1-->
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Numéro de commande ou du marché</span>
+														<br/>
+														<span style="font-style:italic;">Number of tde order or of tde contract</span>
+														<br/>
+														<span>Bestell - oder Vertrags Nr.</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" style="vertical-align: middle; border-left-style:dashed;">
+														<t t-foreach="o.move_ids_without_package" t-as="move_id">
+															<span t-field="move_id.customer_ref"/>
+															<br/>
+														</t>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Autres renseignements</span>
+														<br/>
+														<span style="font-style:italic;">Otder inforamtion</span>
+														<br/>
+														<span>Sonstige Angaben</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														<span t-field="o.other_information"/>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span style="font-size:16px">Renseignements particuliers aux fournitures livrées, notamment la référence des
+															dérogations accordées
+														</span>
+														<br/>
+														<span style="font-size:16px; font:italic;">Particular information to tde delivered supplies, especially
+															reference of tde
+															approved engineering deviations
+														</span>
+														<br/>
+														<span style="font-size:16px">Spezifikation der gelieferten Ware, namentlich die Bezeichnung der genehmigten
+															Abweichungen
+														</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														<span t-field="o.particular_information"/>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Désignation, quantité</span>
+														<br/>
+														<span style="font-style:italic;">Designation,. quantity</span>
+														<br/>
+														<span>Bezeichnung, Menge</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														<t t-foreach="o.move_ids_without_package" t-as="move_id">
+															<span t-field="move_id.product_description"/>,
+															<span t-field="move_id.product_uom_qty"/>
+															<br/>
+														</t>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Référence ou type</span>
+														<br/>
+														<span>Part number or type</span>
+														<br/>
+														<span>Artikel- Nr. oder Typ</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														<t t-foreach="o.move_ids_without_package" t-as="move_id">
+															<span t-field="move_id.product_id"/>
+															<br/>
+														</t>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Numéro de série / lot ou d’identification</span>
+														<br/>
+														<span style="font-style:italic;">Serial, batch number or identification number</span>
+														<br/>
+														<span>Serien – bzw. oder Identifikations-Nr.</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														<t t-foreach="o.move_ids_without_package.mapped('move_line_ids')" t-as="move_line">
+															<span t-field="move_line.lot_id"/>
+															<br/>
+														</t>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="3" style="border-right-style:dashed;">
+														<span>Numéro et date du bordereau de livraison</span>
+														<br/>
+														<span style="font-style:italic;">Number and date of shipping note</span>
+														<br/>
+														<span>Nummer und Datum des Lieferscheins</span>
+														<br/>
+													
+													</td>
+													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
+														N°
+														<span t-field="o.name"/>
+														<span t-field="o.scheduled_date"/>
+													</td>
+												
+												</tr>
+												<tr>
+													<td colspan="8">
+														<p>
+															Nous déclarons que la fourniture citée est conforme aux exigences du contrat et que, après vérifications et
+															essais, elle répond en tout point, aux exigences spécifiées, aux normes et règlements applicables, sauf
+															exceptions, réserves ou dérogations énumérées dans la présente déclaration de conformité.
+														</p>
+														<p style="font-style:italic;">
+															We hereby declare, barring exceptions, reservations, or exemptions listed in the statement of conformity, that
+															the listed supplies comply with the contract requirements and that, after completion of testing and
+															verification, they completely satisfy all specified requirement, and applicable standards and regulations.
+														</p>
+														<p>
+															Wir erklären, dass die vorliegende Lieferung in Übereinstimmung mit den Vertraganforderungen hergestellt wurde
+															und dass sie, nach Durchfürung aller Kontrollen und Prûfungen, in jeder Hinsicht den in den diesbezüglich
+															gültigen Normen unf Vorschriften festgelegten Anforderungen, bis auf die in dieser Überstimmungserklärung
+															genannten Ausnahmen, Vorbehalte oder Abweichungen, entspricht.
+														</p>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="8">
+														<span style="font-size:19px;" class="text-center vertical-center">
+															RESPONSABLE QUALITĖ FOURNISSEUR / SUPPLIER QUALITY MANAGER / QUALITÄTSBEAUFTRAGTER DES LIEFERFIRMA
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="4" class="text-center" style="border-bottom:none;">
+														<span>Nom et fonction / Name and title / Name und Stellung</span>
+													</td>
+													<td class="text-center" style="border-bottom:none;">
+														<span>Date / Datum</span>
+													</td>
+													<td colspan="3" class="text-center" width="25%" style="border-bottom:none;">
+														<span>Signature / Unterschrift :</span>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="4" class="text-center" style="height: 100px; border-top:none;">
+														<strong>Le Bureau Qualité / The Quality Team</strong>
+													</td>
+													<td class="text-center" style="border-top:none;">
+														<span>
+															<span t-field="o.scheduled_date" t-options="{'format':'dd/MM/yyyy'}"/>
+														</span>
+													</td>
+													<td colspan="3" style="border-top:none;">
+														<!--<span>Signature / Unterschrift :</span>-->
+													</td>
+												</tr>
+											
+											</tbody>
+										</table>
+									</div>
+								
+								</div>
+							</div>
+						</t>
+					</t>
+				</div>
+			</t>
+		</template>
+	
+	</data>
+</odoo>
