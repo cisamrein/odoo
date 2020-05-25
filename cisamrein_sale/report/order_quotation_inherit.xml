@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_quotation" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
+                <th name="th_item" class="text-center">
+                    <strong>Item</strong>
+                </th>
+                <th name="th_product" class="text-right">Product code</th>
+                <th name="th_internal_ref" class="text-right">Internal Reference</th>
+                <th name="th_customer_ref" class="text-right">Customer Ref</th>
+            </xpath>
+            <xpath expr="//t[@t-if='not line.display_type']/td[@name='td_name']" position="before">
+                <td name="td_item" class="text-right">
+                    <span t-field="line.item"/>
+                </td>
+                <td name="td_product" class="text-right">
+                    <span t-field="line.product_id"/>
+                </td>
+                <td name="td_customer_ref" class="text-right">
+                    <span t-field="line.ref_int"/>
+                </td>
+                <td name="td_internal_ref" class="text-right">
+                    <span t-field="line.customer_reference"/>
+                </td>
+            </xpath>
+            <!--           <xpath expr="//t[@t-if='line.display_type == 'line_section'']/td[@name='td_section_line']" position="before">-->
+            <!--               <td name="td_item" class="text-right"><span t-field="line.item"/></td>-->
+            <!--               <td name="td_product" class="text-right"><span t-field="line.product_id"/></td>-->
+            <!--               <td name="td_customer_ref" class="text-right"><span t-field="line.ref_int"/></td>-->
+            <!--               <td name="td_internal_ref" class="text-right"><span t-field="line.customer_reference"/></td>-->
+            <!--           </xpath>-->
+            <!--           <xpath expr="//t[@t-if='line.display_type == 'line_note'']/td[@name='td_note_line']" position="before">-->
+            <!--               <td name="td_item" class="text-right"><span t-field="line.item"/></td>-->
+            <!--               <td name="td_product" class="text-right"><span t-field="line.product_id"/></td>-->
+            <!--               <td name="td_customer_ref" class="text-right"><span t-field="line.ref_int"/></td>-->
+            <!--               <td name="td_internal_ref" class="text-right"><span t-field="line.customer_reference"/></td>-->
+            <!--           </xpath>-->
+            <xpath expr="//div[@name='signature']" position="replace">
+                <div t-if="doc.signature" name="signature_inherit" class="row mt64 mb64">
+                    <div style="margin-right:150px;">
+                        <span><br/></span>
+                    </div>
+                    <div align="left" style="margin-right:150px;">
+                        <div class="offset-15">
+                            <strong>Commercial director
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                        <!--                        <div class="text-right">-->
+                        <!--                            <p t-field="doc.signed_by"/>-->
+                        <!--                        </div>-->
+                    </div>
+                    <div style="margin-right:10px;" align="left">
+                        <div class="offset-15">
+                            <strong>Responsible business
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(doc.signature_2)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                        <!--                        <div class="text-right">-->
+                        <!--                            <p t-field="doc.signed_by_2"/>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//p[@t-if='doc.fiscal_position_id and doc.fiscal_position_id.sudo().note']" position="after">
+                <!-- Add your fields or attributes here -->
+                <span t-field="doc.include_document"><br/></span>
+                <span><br/></span>
+                <span t-field="doc.price_condition"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
