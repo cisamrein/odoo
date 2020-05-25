@@ -15,6 +15,11 @@
 					<field name="ref_supplier" attrs="{'column_invisible': [('parent.picking_type_code', '!=', 'incoming')]}"
 					       string="supplier name"/>
 				</xpath>
+				<xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_uom_qty']" position="before">
+					<!-- Add your fields or attributes here -->
+					<field name="ref_supplier" invisible="context.get('default_picking_type_id') != 1"
+						   string="supplier name"/>
+				</xpath>
 			</field>
 		</record>
 	</data>

@@ -45,6 +45,11 @@ msgid "Lot/Serial"
 msgstr "Lot/N° série"
 
 #. module: cisamrein_stock
+#: model:ir.model,name:cisamrein_stock.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lot/N° série"
+
+#. module: cisamrein_stock
 #: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__material_origin
 msgid "Material Origin"
 msgstr "Origine matériel"
@@ -73,6 +78,11 @@ msgstr "Référence fournisseur"
 #: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__product_description
 msgid "Sales Description"
 msgstr ""
+
+#. module: cisamrein_stock
+#: model:ir.model.fields,field_description:cisamrein_stock.field_stock_move__ref_supplier
+msgid "Ref Supplier"
+msgstr "Référence fournisseur"
 
 #. module: cisamrein_stock
 #: model_terms:ir.ui.view,arch_db:cisamrein_stock.stock_picking_form
