@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CIS AMREIN App",
+    'name': "CIS AMREIN Invoice",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -16,17 +16,17 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Operations/Accounting',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['cisamrein_base', 'cisamrein_product', 'cisamrein_stock', 'cisamrein_sale', 'cisamrein_purchase', 'cisamrein_account', 'repair'],
-    'sequence': 1,
+    'depends': ['account', 'cisamrein_base'],
+
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'data/ir_sequence_data.xml',
+        'views/view_account_move.xml',
+
     ],
-    'application': True,
 }
