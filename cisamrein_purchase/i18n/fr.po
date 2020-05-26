@@ -1,0 +1,266 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cisamrein_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-26 07:59+0000\n"
+"PO-Revision-Date: 2020-05-26 07:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid ""
+"<strong>Commercial director\n"
+"                                <br/>\n"
+"                            </strong>\n"
+"                            <strong>Signature</strong>"
+msgstr ""
+"<strong>Directeur commercial\n"
+"                                <br/>\n"
+"                            </strong>\n"
+"                            <strong>Signature</strong>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid "<strong>Internal Reference</strong>"
+msgstr "<strong>Réference interne</strong>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid "<strong>Item</strong>"
+msgstr "<strong>Item</strong>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid "<strong>Product code</strong>"
+msgstr "<strong>Code Article</strong>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid ""
+"<strong>Responsible business\n"
+"                                <br/>\n"
+"                            </strong>\n"
+"                            <strong>Signature</strong>"
+msgstr ""
+"<strong>Chargée d'affaires\n"
+"                                <br/>\n"
+"                            </strong>\n"
+"                            <strong>Signature</strong>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
+msgid "<strong>Supplier Reference</strong>"
+msgstr "<strong>Réference fournisseur</strong>"
+
+#. module: cisamrein_purchase
+#: model:ir.model,name:cisamrein_purchase.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: cisamrein_purchase
+#: model:ir.model,name:cisamrein_purchase.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_res_config_settings__terms_purchase
+msgid "Default purchase terms and conditions"
+msgstr "Termes et conditions d'achat par défaut"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order__signed_by_2
+msgid "Director"
+msgstr "Directeur commercial"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order__signature_2
+msgid "Director Signature"
+msgstr "Signature du Directeur"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_product_supplierinfo__date_end
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_product_supplierinfo__date_end
+msgid "End date for this vendor price"
+msgstr "Date de fin pour ce prix fournisseur"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order_line__ref_int
+msgid "Internal Reference"
+msgstr "Référence interne"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order_line__item
+msgid "Item"
+msgstr ""
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order__max_line_sequence
+msgid "Max sequence in lines"
+msgstr "Max lignes"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_purchase_order__signed_by_2
+msgid "Name of the person that signed the PO"
+msgstr "Nom de la personne qui doit signier"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Other Information"
+msgstr "Autres informations"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_product_supplierinfo__price
+msgid "Price"
+msgstr "Prix"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Price List"
+msgstr "Liste de prix"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Product"
+msgstr "Article"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
+msgid "Product Code"
+msgstr "Code article"
+
+#. module: cisamrein_purchase
+#: model:ir.model,name:cisamrein_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Commande fournisseur"
+
+#. module: cisamrein_purchase
+#: model:ir.model,name:cisamrein_purchase.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Ligne de commande d'achat"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_product_supplierinfo__min_qty
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order_line__ref_supplier
+msgid "Ref Supplier"
+msgstr "Référence fournisseur"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order__signature_1
+msgid "Responsible Signature"
+msgstr "Signature du responsable"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
+msgid "Signature"
+msgstr ""
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_purchase_order__signature_1
+#: model:ir.model.fields,help:cisamrein_purchase.field_purchase_order__signature_2
+msgid "Signature received through the portal."
+msgstr "Signature"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_product_supplierinfo__date_start
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_product_supplierinfo__date_start
+msgid "Start date for this vendor price"
+msgstr "Date de début pour le prix de ce vendeur. "
+
+#. module: cisamrein_purchase
+#: model:ir.model,name:cisamrein_purchase.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Liste de prix du fournisseur"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_res_company__terms_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_res_config_settings__terms_purchase
+msgid "Terms Purchase"
+msgstr "Termes d'achat"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,field_description:cisamrein_purchase.field_purchase_order__notes
+msgid "Terms and Conditions"
+msgstr "Conditions générales"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.res_config_settings
+msgid "Terms and conditions"
+msgstr "Termes et conditions"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_product_supplierinfo__price
+msgid "The price to purchase a product"
+msgstr "Le prix pour l'achat d'un article"
+
+#. module: cisamrein_purchase
+#: model:ir.model.fields,help:cisamrein_purchase.field_product_supplierinfo__min_qty
+msgid ""
+"The quantity to purchase from this vendor to benefit from the price, "
+"expressed in the vendor Product Unit of Measure if not any, in the default "
+"unit of measure of the product otherwise."
+msgstr ""
+"La quantité à acheter auprès de ce fournisseur pour bénéficier du prix, "
+"exprimée dans l'unité de mesure du produit du fournisseur, sinon aucune, "
+"dans l'unité de mesure par défaut du produit."
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Validity"
+msgstr "Validité"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Vendor"
+msgstr "Fournisseur"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "Vendor Information"
+msgstr "Information vendeur"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "days"
+msgstr "jours"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
+msgid "internal name"
+msgstr "Référence interne"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
+msgid "supplier name"
+msgstr "Fournisseur"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
+msgid "to"
+msgstr "à"

@@ -18,12 +18,12 @@ msgstr ""
 #. module: cisamrein_sale
 #: model:ir.actions.report,print_report_name:cisamrein_sale.report_conformity_statement
 msgid "'Statement of conformity - %s' % (object.name)"
-msgstr ""
+msgstr "Etat de conformité - %s' % (object.name)"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
 msgid "<span class=\"o_form_label\">Price condition</span>"
-msgstr "Conditions des prix"
+msgstr "<span class=\"o_form_label\">Conditions des prix</span>"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
@@ -240,7 +240,7 @@ msgstr "<strong>Référence interne</strong>"
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
 msgid "<strong>Item</strong>"
-msgstr ""
+msgstr "<strong>Item</strong>"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
@@ -521,8 +521,7 @@ msgstr "Conditions de vente"
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
 msgid "This default configuration is applied to any new order created"
-msgstr ""
-"Cette configuration est appliqué par défaut aux nouveaux commandes de Ventes"
+msgstr "Cette configuration est appliqué par défaut aux nouveaux commandes de Ventes"
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_stock_picking

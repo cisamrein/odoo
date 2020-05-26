@@ -29,5 +29,6 @@
         'views/view_list_price_supplier.xml',
         'views/view_config_settings.xml',
         'views/view_purchase_order.xml',
+        'report/orders_purchase_template.xml',
     ],
 }
