@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cisamrein_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-26 10:51+0000\n"
+"PO-Revision-Date: 2020-05-26 10:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Customer reference</span>"
+msgstr "Référence client"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Internal reference</span>"
+msgstr "<span>Référence interne</span>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Item</span>"
+msgstr ""
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Material origin</span>"
+msgstr "<span>Origin matériel</span>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Product code</span>"
+msgstr "Code article"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__customer_ref
+msgid "Customer Ref"
+msgstr "Référence client"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__internal_ref
+msgid "Internal Reference"
+msgstr "Référence interne"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__item
+msgid "Item"
+msgstr ""
+
+#. module: cisamrein_account
+#: model:ir.model,name:cisamrein_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__material_origin
+msgid "Material Origin"
+msgstr "Origine matériel"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid "<strong>Source:</strong>"
+msgstr "<strong>Origine :</strong>"
