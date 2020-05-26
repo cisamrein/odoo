@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <template id="quotation_template_inherit" inherit_id="purchase.report_purchasequotation_document">
+           <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
+               <th name="th_item">
+                   <strong>Item</strong>
+               </th>
+               <th name="th_product_id" class="text-center">
+                   <strong>Product code</strong>
+               </th>
+               <th name="th_internal_ref" class="text-right">
+                   <strong>Internal Reference</strong>
+               </th>
+               <th name="th_supplier_ref" class="text-right">
+                   <strong>Supplier Reference</strong>
+               </th>
+           </xpath>
+           <xpath expr="//t[@t-if='not order_line.display_type']/td[@id='product']" position="before">
+               <td name="td_item" class="text-right">
+                   <span t-field="order_line.item"/>
+               </td>
+               <td name="td_product" class="text-right">
+                   <span t-field="order_line.product_id"/>
+               </td>
+               <td name="td_customer_ref" class="text-right">
+                   <span t-field="order_line.ref_int"/>
+               </td>
+               <td name="td_internal_ref" class="text-right">
+                   <span t-field="order_line.ref_supplier"/>
+               </td>
+           </xpath>
+           <xpath expr="//p[@t-field='o.notes']" position="before">
+               <!-- Add your fields or attributes here -->
+                <div t-if="o.signature_1" name="signature_inherit" class="row mt64 mb64">
+                    <div style="margin-right:150px;">
+                        <span><br/></span>
+                    </div>
+                    <div align="left" style="margin-right:150px;">
+                        <div class="offset-15">
+                            <strong>Responsible business
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(o.signature_1)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                    </div>
+                    <div style="margin-right:10px;" align="left">
+                        <div class="offset-15">
+                            <strong>Commercial director
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(o.signature_2)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                    </div>
+                </div>
+           </xpath>
+       </template>
+
+        <template id="order_template_inherit" inherit_id="purchase.report_purchaseorder_document">
+           <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
+               <th name="th_item">
+                   <strong>Item</strong>
+               </th>
+               <th name="th_product_id" class="text-center">
+                   <strong>Product code</strong>
+               </th>
+               <th name="th_internal_ref" class="text-right">
+                   <strong>Internal Reference</strong>
+               </th>
+               <th name="th_supplier_ref" class="text-right">
+                   <strong>Supplier Reference</strong>
+               </th>
+           </xpath>
+           <xpath expr="//t[@t-if='not line.display_type']/td[@id='product']" position="before">
+               <td name="td_item" class="text-right">
+                   <span t-field="line.item"/>
+               </td>
+               <td name="td_product" class="text-right">
+                   <span t-field="line.product_id"/>
+               </td>
+               <td name="td_customer_ref" class="text-right">
+                   <span t-field="line.ref_int"/>
+               </td>
+               <td name="td_internal_ref" class="text-right">
+                   <span t-field="line.ref_supplier"/>
+               </td>
+           </xpath>
+           <xpath expr="//p[@t-field='o.notes']" position="before">
+                <!-- Add your fields or attributes here -->
+                <div t-if="o.signature_1" name="signature_inherit" class="row mt64 mb64">
+                    <div style="margin-right:150px;">
+                        <span>
+                            <br/>
+                        </span>
+                    </div>
+                    <div align="left" style="margin-right:150px;">
+                        <div class="offset-15">
+                            <strong>Responsible business
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(o.signature_1)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                    </div>
+                    <div style="margin-right:10px;" align="left">
+                        <div class="offset-15">
+                            <strong>Commercial director
+                                <br/>
+                            </strong>
+                            <strong>Signature</strong>
+                        </div>
+                        <div class="offset-15">
+                            <img t-att-src="image_data_uri(o.signature_2)" style="max-height: 4cm; max-width: 8cm;"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+       </template>
+    </data>
+</odoo>
