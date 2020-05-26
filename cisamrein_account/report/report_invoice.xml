@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_invoice_document" inherit_id="account.report_invoice_document">
+			<xpath expr="//th[@name='th_description']" position="before">
+				<th class="text-left">
+					<span>Item</span>
+				</th>
+				<th class="text-left">
+					<span>Product code</span>
+				</th>
+				<th class="text-left">
+					<span>Internal reference</span>
+				</th>
+				<th class="text-left">
+					<span>Customer reference</span>
+				</th>
+				<th class="text-left">
+					<span>Material origin</span>
+				</th>
+			</xpath>
+			<xpath expr="//td[@name='account_invoice_line_name']" position="replace">
+				<td>
+					<span t-field="line.item"/>
+				</td>
+				<td>
+					<span t-field="line.name"/>
+				</td>
+				<td>
+					<span t-field="line.internal_ref"/>
+				</td>
+				<td>
+					<span t-field="line.customer_ref"/>
+				</td>
+				<td>
+					<span t-field="line.material_origin"/>
+				</td>
+				<td name="account_invoice_line_name">
+					<span t-field="line.product_id.description_sale"/>
+				</td>
+			</xpath>
+			<!--<xpath expr="//div[@name='origin']" position="replace">-->
+			<!---->
+			<!--</xpath>-->
+			<!--<xpath expr="//div[@id='informations']" position="inside">-->
+				<!--<div class="col-auto mw-100 mb-2" t-if="o.ref" name="reference">-->
+					<!--<strong>Sales person:</strong>-->
+					<!--<p class="m-0" t-field="o.invoice_user_id"/>-->
+				<!--</div>-->
+			<!--</xpath>-->
+			<!--<xpath expr="//div[@id='informations']" position="after">-->
+				<!--<div class="col-auto mw-100 mb-2" t-if="o.invoice_date" name="invoice_date">-->
+					<!--<strong>Invoice Date:</strong>-->
+					<!--<p class="m-0" t-field="o.invoice_date"/>-->
+				<!--</div>-->
+			<!--</xpath>-->
+		</template>
+	</data>
+</odoo>
