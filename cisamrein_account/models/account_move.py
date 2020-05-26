@@ -2,6 +2,19 @@
 
 from odoo import models, fields, api
 
+class AccountMove(models.Model):
+    _inherit = "account.move"
+
+    narration = fields.Text(related='company_id.note_invoice', translate=True)
+    # signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False,
+    #                            attachment=True,
+    #                            max_width=1024, max_height=1024)
+    #
+    # signature_2 = fields.Image('Director Signature', help='Signature received through the portal.', copy=False,
+    #                            attachment=True,
+    #                            max_width=1024, max_height=1024)
+    # signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO')
+
 
 class AccountInvoiceLine(models.Model):
     _inherit = "account.move.line"
