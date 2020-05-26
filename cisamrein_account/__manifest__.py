@@ -28,6 +28,7 @@
         'report/report_invoice.xml',
         'data/ir_sequence_data.xml',
         'views/view_account_move.xml',
+        'views/view_res_config_settings.xml',
 
     ],
 }
