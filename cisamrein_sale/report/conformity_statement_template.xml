@@ -5,7 +5,7 @@
 			<t t-call="web.basic_layout">
 				<style>
 					body {
-					font-size: 17px;
+					font-size: 14px;
 					font-family: Arial,sans-serif;
 					font-weight:normal;
 					border: 1px #000000;
@@ -14,13 +14,13 @@
 					color: #0402FD;
 					}
 					.thin-text{
-					font-size: 13px;
+					font-size: 10px;
 					}
 					.vertical-center{
 					vertical-align: middle;
 					}
 					.normal-text{
-					font-size: 16px;
+					font-size: 13px;
 					}
 				</style>
 				<div class="page">
@@ -37,8 +37,6 @@
 														<span class="thin-text">Fournisseur</span>
 														<br/>
 														<span class="thin-text">Supplier</span>
-														<br/>
-														<span class="thin-text">Lieferant</span>
 														<br/>
 													</td>
 													<td>
@@ -64,37 +62,27 @@
 															NFL 00-015C&amp;ISO/CEI 17050
 														</span>
 														<br/>
-														
-														<span style="font-size:20px; ">ÜBEREINSTIMMUNGSERKLÄRUNG</span>
-														<br/>
-														
-														<span class="thin-text">DER VOM LIEFERWERK ENTSPRECHEND DER NORM NFL 00-015C &amp; ISO/CEI
-															17050 ERSTELLT
-															WURDE
-														</span>
-														<br/>
 													</td>
 													<td width="20%" colspan="2" class="normal-text">
-														<span>Déclaration/Statement/Erklärung</span>
+														<span>Déclaration/Statement</span>
 														<br/>
 														N°:
-														<span class="blue-text">17-1143.051</span>
+														<span class="blue-text" t-field="o.origin"/>
+														<span class="blue-text">.051</span>
 													</td>
 												</tr>
 												<tr>
 													<td colspan="2" width="20%" class="text-center">
-														<span class="thin-text">Etablissement / Plant / Betrieb</span>
+														<span class="thin-text">Etablissement / Plant</span>
 														<br/>
 														COURBEVOIE
 														<br/>
-														<span class="thin-text">France / Frankreich</span>
+														<span class="thin-text">France</span>
 													</td>
 													<td class="normal-text" style="vertical-align: middle;">
 														Nombre de feuilles
 														<br/>
 														Number of pages
-														<br/>
-														Seitenzahl
 													</td>
 													<td>
 														<span class="blue-text" style="vertical-align: middle;">1</span>
@@ -106,9 +94,6 @@
 														<br/>
 														<span style="font-style:italic;">Customer, trade name, factory</span>
 														<br/>
-														<span>Kunde / Firma, Werk</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" class="blue-text" style="border-left-style:dashed;">
 														<!--1-->
@@ -121,25 +106,16 @@
 														<br/>
 														<span style="font-style:italic;">Number of tde order or of tde contract</span>
 														<br/>
-														<span>Bestell - oder Vertrags Nr.</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" style="vertical-align: middle; border-left-style:dashed;">
-														<t t-foreach="o.move_ids_without_package" t-as="move_id">
-															<span t-field="move_id.customer_ref"/>
-															<br/>
-														</t>
+														<span t-field="o.cmd_customer_ref"/>
 													</td>
-												
 												</tr>
 												<tr>
 													<td colspan="3" style="border-right-style:dashed;">
 														<span>Autres renseignements</span>
 														<br/>
 														<span style="font-style:italic;">Otder inforamtion</span>
-														<br/>
-														<span>Sonstige Angaben</span>
 														<br/>
 													
 													</td>
@@ -159,10 +135,6 @@
 															approved engineering deviations
 														</span>
 														<br/>
-														<span style="font-size:16px">Spezifikation der gelieferten Ware, namentlich die Bezeichnung der genehmigten
-															Abweichungen
-														</span>
-														<br/>
 													
 													</td>
 													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
@@ -176,9 +148,6 @@
 														<br/>
 														<span style="font-style:italic;">Designation,. quantity</span>
 														<br/>
-														<span>Bezeichnung, Menge</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
 														<t t-foreach="o.move_ids_without_package" t-as="move_id">
@@ -195,9 +164,6 @@
 														<br/>
 														<span>Part number or type</span>
 														<br/>
-														<span>Artikel- Nr. oder Typ</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
 														<t t-foreach="o.move_ids_without_package" t-as="move_id">
@@ -213,9 +179,6 @@
 														<br/>
 														<span style="font-style:italic;">Serial, batch number or identification number</span>
 														<br/>
-														<span>Serien – bzw. oder Identifikations-Nr.</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
 														<t t-foreach="o.move_ids_without_package.mapped('move_line_ids')" t-as="move_line">
@@ -231,9 +194,6 @@
 														<br/>
 														<span style="font-style:italic;">Number and date of shipping note</span>
 														<br/>
-														<span>Nummer und Datum des Lieferscheins</span>
-														<br/>
-													
 													</td>
 													<td colspan="5" class="blue-text" style="vertical-align: middle;border-left-style:dashed;">
 														N°
@@ -254,30 +214,24 @@
 															the listed supplies comply with the contract requirements and that, after completion of testing and
 															verification, they completely satisfy all specified requirement, and applicable standards and regulations.
 														</p>
-														<p>
-															Wir erklären, dass die vorliegende Lieferung in Übereinstimmung mit den Vertraganforderungen hergestellt wurde
-															und dass sie, nach Durchfürung aller Kontrollen und Prûfungen, in jeder Hinsicht den in den diesbezüglich
-															gültigen Normen unf Vorschriften festgelegten Anforderungen, bis auf die in dieser Überstimmungserklärung
-															genannten Ausnahmen, Vorbehalte oder Abweichungen, entspricht.
-														</p>
 													</td>
 												</tr>
 												<tr>
 													<td colspan="8">
 														<span style="font-size:19px;" class="text-center vertical-center">
-															RESPONSABLE QUALITĖ FOURNISSEUR / SUPPLIER QUALITY MANAGER / QUALITÄTSBEAUFTRAGTER DES LIEFERFIRMA
+															RESPONSABLE QUALITĖ FOURNISSEUR / SUPPLIER QUALITY MANAGER
 														</span>
 													</td>
 												</tr>
 												<tr>
 													<td colspan="4" class="text-center" style="border-bottom:none;">
-														<span>Nom et fonction / Name and title / Name und Stellung</span>
+														<span>Nom et fonction / Name and title</span>
 													</td>
 													<td class="text-center" style="border-bottom:none;">
-														<span>Date / Datum</span>
+														<span>Date</span>
 													</td>
 													<td colspan="3" class="text-center" width="25%" style="border-bottom:none;">
-														<span>Signature / Unterschrift :</span>
+														<span>Signature</span>
 													</td>
 												</tr>
 												<tr>
@@ -290,7 +244,6 @@
 														</span>
 													</td>
 													<td colspan="3" style="border-top:none;">
-														<!--<span>Signature / Unterschrift :</span>-->
 													</td>
 												</tr>
 											

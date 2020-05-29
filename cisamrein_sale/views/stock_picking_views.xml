@@ -22,7 +22,8 @@
 				    <field name="cmd_customer_ref"/>
 				</xpath>
 				<xpath expr="//button[@name='do_print_picking']" position="after">
-				    <button name="print_conformity_statement" string="Conformity statement" type="object" class="oe_highlight"/>
+				    <button name="print_conformity_statement" string="Conformity statement" type="object" class="oe_highlight"
+				            attrs="{'invisible': [('picking_type_code', '!=', 'outgoing')]}"/>
 				</xpath>
 			</field>
 		</record>

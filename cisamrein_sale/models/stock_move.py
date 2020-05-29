@@ -21,4 +21,5 @@ class StockMoveInherit(models.Model):
         if picking_type_id.code == 'outgoing':
             group_id = self.mapped('group_id')
             res['include_document'] = group_id.sale_id.include_document
+            res['cmd_customer_ref'] = group_id.sale_id.cmd_customer_ref
         return res

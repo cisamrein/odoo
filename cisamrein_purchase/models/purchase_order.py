@@ -43,6 +43,15 @@ class PurchaseOrder(models.Model):
         return super(PurchaseOrder,
             self.with_context(keep_line_sequence=True)).copy(default)
 
+    @api.model
+    def _prepare_picking(self):
+        """
+        Add partner_ref in generated stock.pickin
+        """
+        res = super(PurchaseOrder, self)._prepare_picking()
+        res['cmd_customer_ref'] = self.partner_ref
+        return res
+
 
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'

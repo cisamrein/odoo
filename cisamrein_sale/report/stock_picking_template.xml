@@ -12,7 +12,7 @@
 					<span t-field="move_line.move_id.item"/>
 				</td>
 			</xpath>
-			<xpath expr="//th[@name='lot_serial']" position="before">
+			<xpath expr="//th[@name='lot_serial']" position="after">
 				<th class="text-center">
 					<strong>Internal Reference</strong>
 				</th>
@@ -33,7 +33,7 @@
 					</th>
 				</t>
 			</xpath>
-			<xpath expr="//td[@t-if='has_serial_number and move_line.lot_name']" position="before">
+			<xpath expr="//td[@t-if='has_serial_number and move_line.lot_name']" position="after">
 				<td class="text-center">
 					<span t-field="move_line.move_id.product_default_code"/>
 				</td>
@@ -66,7 +66,7 @@
 					<span t-field="ml.move_id.item"/>
 				</td>
 			</xpath>
-			<xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']/thead/tr/th[2]" position="before">
+			<xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']/thead/tr/th[2]" position="after">
 				<th class="text-center">
 					<strong>Internal Reference</strong>
 				</th>
@@ -87,7 +87,7 @@
 					</th>
 				</t>
 			</xpath>
-			<xpath expr="//t[@t-foreach='move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)']/tr/td[2]" position="before">
+			<xpath expr="//t[@t-foreach='move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)']/tr/td[2]" position="after">
 				<td class="text-center">
 					<span t-field="ml.move_id.product_default_code"/>
 				</td>
@@ -100,7 +100,12 @@
 					</t>
 				</td>
 				<td class="text-center">
-					<span t-field="ml.move_id.product_description"/>
+					<t t-if="o.picking_type_code != 'incoming'">
+						<span t-field="ml.move_id.product_description"/>
+					</t>
+					<t t-else="">
+						<span t-field="ml.move_id.product_id.description_purchase"/>
+					</t>
 				</td>
 				<t t-if="o.picking_type_code != 'incoming'">
 					<td class="text-center">
