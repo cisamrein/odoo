@@ -67,6 +67,10 @@
                 <span><br/></span>
                 <span t-field="doc.price_condition"/>
             </xpath>
+            <xpath expr="//p[@t-field='doc.note']" position="before">
+                <!-- Add your fields or attributes here -->
+                <span t-field="doc.picking_policy"><br/></span>
+            </xpath>
         </template>
     </data>
 </odoo>

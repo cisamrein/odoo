@@ -17,6 +17,11 @@ msgstr ""
 
 #. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
+msgid "<span>Payment condition</span>"
+msgstr "<span>Conditions de paiement:</span>"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.quotation_template_inherit
 msgid ""
 "<strong>Commercial director\n"

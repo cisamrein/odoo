@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
-    notes = fields.Text(default=lambda self: self.env.user.company_id.terms_purchase, translate=True)
+    notes = fields.Text(readonly=False)
 
     signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False, attachment=True,
                                max_width=1024, max_height=1024)
@@ -15,6 +15,13 @@ class PurchaseOrder(models.Model):
     signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO')
 
     # signed_on_2 = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
+
+    @api.onchange('partner_id')
+    def _set_lang_orders(self):
+        if self.partner_id.lang:
+            self.notes = self.env.user.company_id.with_context(lang=self.partner_id.lang).terms_purchase
+        else:
+            self.notes = self.env.user.company_id.terms_purchase
 
     @api.depends('order_line')
     def _compute_max_line_sequence(self):

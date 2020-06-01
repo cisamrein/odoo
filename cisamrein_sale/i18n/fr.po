@@ -16,9 +16,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: cisamrein_sale
+#: model:ir.actions.report,print_report_name:cisamrein_sale.arc_doc
+msgid "'ARC Document - %s' % (object.name)"
+msgstr "'ARC - %s' % (object.name)"
+
+#. module: cisamrein_sale
 #: model:ir.actions.report,print_report_name:cisamrein_sale.report_conformity_statement
 msgid "'Statement of conformity - %s' % (object.name)"
-msgstr "'Déclaration de conformité - %s' % (object.name)"
+msgstr "'Certificat de conformité - %s' % (object.name)"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
+msgid "<span class=\"blue-text\">.051</span>"
+msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
@@ -178,6 +188,16 @@ msgid ""
 msgstr ""
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "<span>Order Aknowledgement #</span>"
+msgstr "<span>Accusé de Réception de Commande #</span>"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Facture Pro-Forma # </span>"
+
+#. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid ""
 "<span>Raison sociale du client, usine</span>\n"
@@ -222,6 +242,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Customer Ref</strong>"
 msgstr "<strong>Référence client</strong>"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "<strong>Customer Reference:</strong>"
+msgstr "<strong>Référence commande client:</strong>"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_delivery_inherit
@@ -271,6 +296,16 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 msgid "<strong>Supplier Ref</strong>"
 msgstr "<strong>Référence fournisseur</strong>"
+
+#. module: cisamrein_sale
+#: model:ir.actions.report,name:cisamrein_sale.arc_doc
+msgid "ARC document"
+msgstr ""
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__assignment_center
+msgid "Assignment Center"
+msgstr "Centrale d'affection"
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__cmd_customer_ref
@@ -369,6 +404,7 @@ msgid "ID"
 msgstr ""
 
 #. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__include_document
 #: model:ir.model.fields,field_description:cisamrein_sale.field_stock_picking__include_document
 msgid "Include Document"
 msgstr "Documents inclus"
@@ -440,11 +476,21 @@ msgid ""
 msgstr ""
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "Order #"
+msgstr "Commande #"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__price_condition
 #: model:ir.model.fields,field_description:cisamrein_sale.field_res_config_settings__price_condition
 #: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__price_condition
 msgid "Price Condition"
 msgstr "Conditions de prix"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
+msgid "Print ARC"
+msgstr "Imprimer ARC"
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_product_template
@@ -461,6 +507,11 @@ msgstr "Article"
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form
 msgid "Product code"
 msgstr "Code article"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "Quotation #"
+msgstr "Devis #"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.sale_order_form

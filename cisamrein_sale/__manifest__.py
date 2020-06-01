@@ -31,6 +31,8 @@
         'views/stock_picking_views.xml',
         'views/view_config_settings.xml',
         'views/sale_order_views.xml',
+        'report/arc_document.xml',
+        'report/arc_statement_report.xml',
         'report/conformity_statement_report.xml',
         'report/conformity_statement_template.xml',
         'report/stock_picking_template.xml',

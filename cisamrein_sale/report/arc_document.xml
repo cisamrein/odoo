@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="arc_document_template" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//h2[@class='mt16']" position="replace">
+            <h2 class="mt16">
+                <t t-if="is_arc_forma">
+                    <span>Order Aknowledgement #</span>
+                </t>
+                <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                    <span t-if="doc.state not in ['draft','sent'] and not is_arc_forma">Order # </span>
+                    <span t-if="doc.state in ['draft','sent'] and not is_arc_forma">Quotation # </span>
+                </t>
+                <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                    <span>Pro-Forma Invoice # </span>
+                </t>
+                <span t-field="doc.name"/>
+            </h2>
+        </xpath>
+        <xpath expr="//div[@t-if='doc.client_order_ref']" position="after">
+            <!-- Add your fields or attributes here -->
+            <div t-if="is_arc_forma" class="col-auto mw-100 mb-2">
+                <strong>Customer Reference:</strong>
+                <p class="m-0" t-field="doc.cmd_customer_ref"/>
+            </div>
+        </xpath>
+    </template>
+
+
+    <template id="report_arc_document">
+        <t t-call="web.html_container">
+            <t t-set="is_arc_forma" t-value="True"/>
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="cisamrein_sale.arc_document_template" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>
+
+

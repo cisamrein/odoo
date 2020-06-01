@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class AccountMove(models.Model):
     _inherit = "account.move"
 
-    narration = fields.Text(related='company_id.note_invoice', translate=True)
+    narration = fields.Text(readonly=False)
     # signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False,
     #                            attachment=True,
     #                            max_width=1024, max_height=1024)
@@ -14,6 +14,14 @@ class AccountMove(models.Model):
     #                            attachment=True,
     #                            max_width=1024, max_height=1024)
     # signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO')
+
+    @api.onchange('partner_id')
+    def _set_lang_orders(self):
+        if self.partner_id.lang:
+            self.narration = self.company_id.with_context(lang=self.partner_id.lang).note_invoice
+        else:
+            self.narration = self.company_id.note_invoice
+
 
 
 class AccountInvoiceLine(models.Model):
