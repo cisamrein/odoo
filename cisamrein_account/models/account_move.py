@@ -71,10 +71,13 @@ class AccountInvoiceLine(models.Model):
         else:
             product = self.product_id
 
-        values = product.description_sale
-        # if product.partner_ref:
-        #     values = product.partner_ref
-        if self.journal_id.type == 'purchase':
+        values = []
+        if product.partner_ref:
+            values.append(product.partner_ref)
+        if self.journal_id.type == 'sale':
+            if product.description_sale:
+                values.append(product.description_sale)
+        elif self.journal_id.type == 'purchase':
             if product.description_purchase:
-                values = product.description_purchase
+                values.append(product.description_purchase)
         return values
