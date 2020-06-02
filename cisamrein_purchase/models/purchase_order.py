@@ -85,3 +85,5 @@ class PurchaseOrderLine(models.Model):
         if product_lang.description_purchase:
             name = product_lang.description_purchase
         return name
+
+

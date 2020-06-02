@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 
+
 class AccountMove(models.Model):
     _inherit = "account.move"
 
@@ -21,7 +22,6 @@ class AccountMove(models.Model):
             self.narration = self.company_id.with_context(lang=self.partner_id.lang).note_invoice
         else:
             self.narration = self.company_id.note_invoice
-
 
 
 class AccountInvoiceLine(models.Model):
@@ -60,24 +60,23 @@ class AccountInvoiceLine(models.Model):
                                                                               limit=1, order='id DESC')
             rec.customer_ref = product_customerinfo_id.name
 
-    # def _get_computed_name(self):
-    #     self.ensure_one()
-    #
-    #     if not self.product_id:
-    #         return ''
-    #
-    #     if self.partner_id.lang:
-    #         product = self.product_id.with_context(lang=self.partner_id.lang)
-    #     else:
-    #         product = self.product_id
-    #
-    #     values = []
-    #     if product.partner_ref:
-    #         values.append(product.partner_ref)
-    #     if self.journal_id.type == 'sale':
-    #         if product.description_sale:
-    #             values.append(product.description_sale)
-    #     elif self.journal_id.type == 'purchase':
-    #         if product.description_purchase:
-    #             values.append(product.description_purchase)
-    #     return values
+    def _get_computed_name(self):
+        self.ensure_one()
+
+        if not self.product_id:
+            return ''
+
+        if self.partner_id.lang:
+            product = self.product_id.with_context(lang=self.partner_id.lang)
+        else:
+            product = self.product_id
+
+        values = product.description_sale
+        # if product.partner_ref:
+        #     values = product.partner_ref
+        if self.journal_id.type == 'purchase':
+            if product.description_purchase:
+                values = product.description_purchase
+        return values
+
+
