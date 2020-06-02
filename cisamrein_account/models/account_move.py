@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 
+
 class AccountMove(models.Model):
     _inherit = "account.move"
 
@@ -21,7 +22,6 @@ class AccountMove(models.Model):
             self.narration = self.company_id.with_context(lang=self.partner_id.lang).note_invoice
         else:
             self.narration = self.company_id.note_invoice
-
 
 
 class AccountInvoiceLine(models.Model):
@@ -78,3 +78,5 @@ class AccountInvoiceLine(models.Model):
             if product.description_purchase:
                 values = product.description_purchase
         return values
+
+
