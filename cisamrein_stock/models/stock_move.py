@@ -27,10 +27,13 @@ class StockMoveInherit(models.Model):
         res['item'] = self.item
         return res
 
+
+class StockMoveLineInherit(models.Model):
+    _inherit ='stock.move.line'
     @api.model
     def create(self, values):
         # Add code here
-        res = super(StockMoveInherit, self).create(values)
+        res = super(StockMoveLineInherit, self).create(values)
         if res.purchase_line_id:
             res.item = res.purchase_line_id.item
             res.ref_supplier = res.purchase_line_id.ref_supplier
