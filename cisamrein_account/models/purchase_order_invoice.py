@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from odoo.tools.float_utils import float_compare
 from odoo import models, fields, api
 
 
