@@ -31,7 +31,7 @@ class StockMoveInherit(models.Model):
     def create(self, values):
         # Add code here
         res = super(StockMoveInherit, self).create(values)
-        if values.get('purchase_line_id'):
-            res.item = res.purchase_line_id.item
-            res.ref_supplier = res.purchase_line_id.ref_supplier
+        if res.created_purchase_line_id:
+            res.item = res.created_purchase_line_id.item
+            res.ref_supplier = res.created_purchase_line_id.ref_supplier
         return res
