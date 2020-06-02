@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class PurchaseOrderLine(models.Model):
-    _inherit = "purchase.order.line"
+    _inherit = 'purchase.order.line'
 
     def _prepare_account_move_line(self, move):
         """
