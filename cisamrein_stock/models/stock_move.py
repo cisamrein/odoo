@@ -27,11 +27,11 @@ class StockMoveInherit(models.Model):
         res['item'] = self.item
         return res
 
-    @api.model_create_multi
-    def create(self, values):
-        # Add code here
-        res = super(StockMoveInherit, self).create(values)
-        if res.created_purchase_line_id:
-            res.item = res.created_purchase_line_id.item
-            res.ref_supplier = res.created_purchase_line_id.ref_supplier
-        return res
+    # @api.model_create_multi
+    # def create(self, values):
+    #     # Add code here
+    #     res = super(StockMoveInherit, self).create(values)
+    #     if res.created_purchase_line_id:
+    #         res.item = res.created_purchase_line_id.item
+    #         res. = res.created_purchase_line_id.ref_supplier
+    #     return res
