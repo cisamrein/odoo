@@ -26,12 +26,3 @@ class StockMoveInherit(models.Model):
         res = super(StockMoveInherit, self)._prepare_procurement_values()
         res['item'] = self.item
         return res
-
-    @api.model
-    def create(self, values):
-        # Add code here
-        res = super(StockMoveInherit, self).create(values)
-        if res.purchase_line_id:
-            res.item = res.purchase_line_id.item
-            res.ref_supplier = res.purchase_line_id.ref_supplier
-        return res

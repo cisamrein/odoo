@@ -63,7 +63,14 @@
        </template>
 
         <template id="order_template_inherit" inherit_id="purchase.report_purchaseorder_document">
-           <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
+           <xpath expr="//div[@t-if='o.date_order']" position="after">
+                <div name="incoterms" class="col-3 bm-2">
+                    <strong>Incoterm:</strong>
+                    <p t-field="o.incoterm_id" class="m-0"/>
+                </div>
+           </xpath>
+
+            <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
                <th name="th_item">
                    <strong>Item</strong>
                </th>
@@ -122,6 +129,10 @@
                         </div>
                     </div>
                 </div>
+            </xpath>
+            <xpath expr="//p[@t-field='o.notes']" position="after">
+                 <span>Payment condition</span>
+                 <p t-field="o.payment_term_id"/>
             </xpath>
        </template>
     </data>

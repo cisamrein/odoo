@@ -92,6 +92,5 @@ class ProductInherit(models.Model):
         # name = self.display_name
         name = ""
         if self.description_sale:
-            name += '\n' + self.description_sale
-
+            name += '' + self.description_sale
         return name

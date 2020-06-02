@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		
 		<record id="sale_order_form" model="ir.ui.view">
 			<field name="name">sale.order.form</field>
 			<field name="model">sale.order</field>
 			<field name="inherit_id" ref="sale.view_order_form"/>
 			<field name="arch" type="xml">
+				<xpath expr="//button[@name='action_draft']" position="after">
+					<button type="object" name="print_arc_document" class="oe_highlight" string="Print ARC"
+							attrs="{'invisible': [('state', 'not in', ('sent','sale'))]}"/>
+				</xpath>
 				<xpath expr="//field[@name='note']" position="after">
 					<group colspan="12">
 						<field name="include_document"/>
@@ -63,6 +66,21 @@
 				</xpath>
 			</field>
 		</record>
-	
+
+		<!-- Inherit Form View to Modify it -->
+		<record id="sale_order_inherit2" model="ir.ui.view">
+		    <field name="name">sale.order.inherit2</field>
+		    <field name="model">sale.order</field>
+		    <field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
+		    <field name="arch" type="xml">
+
+		        <xpath expr="//field[@name='sale_order_template_id']" position="after">
+		            <!-- Add your fields or attributes here -->
+					<field name="assignment_center"/>
+		        </xpath>
+
+		    </field>
+		</record>
+
 	</data>
 </odoo>
