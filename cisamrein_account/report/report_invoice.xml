@@ -39,6 +39,19 @@
 					<span t-field="line.product_id.description_sale"/>
 				</td>
 			</xpath>
+			<xpath expr="//div[@name='origin']" position="after">
+				<div class="col-auto mw-100 mb-2" name="arc_doc">
+                            <strong>ARC:</strong>
+                            <p class="m-0" t-field="o.arc_doc"/>
+				</div>
+			</xpath>
+			<xpath expr="//div[@name='customer_code']" position="after">
+				<div class="col-auto mw-100 mb-2" name="cmd_customer_ref">
+                            <strong>Cmd Reference:</strong>
+                            <p class="m-0" t-field="o.cmd_customer_ref"/>
+				</div>
+			</xpath>
+
 			<!--<xpath expr="//div[@name='origin']" position="replace">-->
 			<!---->
 			<!--</xpath>-->

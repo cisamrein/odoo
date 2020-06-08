@@ -26,6 +26,14 @@
             </xpath>
 
             <xpath expr="//div[@name='signature']" position="replace">
+                <br/>
+            </xpath>
+
+            <xpath expr="//p[@t-if='doc.fiscal_position_id and doc.fiscal_position_id.sudo().note']" position="after">
+                <!-- Add your fields or attributes here -->
+                <span t-field="doc.include_document"><br/></span>
+                <span><br/></span>
+                <span t-field="doc.price_condition"/>
                 <div t-if="doc.signature" name="signature_inherit" class="row mt64 mb64">
                     <div style="margin-right:150px;">
                         <span><br/></span>
@@ -59,13 +67,6 @@
                         <!--                        </div>-->
                     </div>
                 </div>
-            </xpath>
-
-            <xpath expr="//p[@t-if='doc.fiscal_position_id and doc.fiscal_position_id.sudo().note']" position="after">
-                <!-- Add your fields or attributes here -->
-                <span t-field="doc.include_document"><br/></span>
-                <span><br/></span>
-                <span t-field="doc.price_condition"/>
             </xpath>
             <xpath expr="//p[@t-field='doc.note']" position="before">
                 <!-- Add your fields or attributes here -->
