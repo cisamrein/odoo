@@ -23,13 +23,12 @@ msgstr "'ARC - %s' % (object.name)"
 #. module: cisamrein_sale
 #: model:ir.actions.report,print_report_name:cisamrein_sale.report_conformity_statement
 msgid "'Statement of conformity - %s' % (object.name)"
-msgstr "'Certificat de conformité - %s' % (object.name)"
+msgstr "'Déclaration de conformité - %s' % (object.name)"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid "<span class=\"blue-text\">.051</span>"
 msgstr ""
-
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
 msgid "<span class=\"o_form_label\">Price condition</span>"

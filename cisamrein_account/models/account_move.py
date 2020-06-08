@@ -23,7 +23,6 @@ class AccountMove(models.Model):
         else:
             self.narration = self.company_id.note_invoice
 
-
 class AccountInvoiceLine(models.Model):
     _inherit = "account.move.line"
 
