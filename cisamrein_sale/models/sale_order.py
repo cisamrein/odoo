@@ -13,7 +13,7 @@ class SaleOrder(models.Model):
     signature_2 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False, attachment=True,
                                max_width=1024, max_height=1024)
     signed_by_2 = fields.Many2one('res.users', string='Manager', help='Name of the person that signed the SO')
-    assignment_center = fields.Char()
+    assignment_center = fields.Many2one("res.partner", help="Add Assignment center on the Order")
 
     @api.onchange('partner_id')
     def _set_lang_orders(self):
@@ -73,3 +73,12 @@ class SaleOrderLine(models.Model):
         self.ensure_one()
         values['item'] = self.item
         return values
+
+    def _prepare_invoice_line(self):
+        """
+        Prepare the dict of values to create the new invoice line for a sales order line.
+        """
+        res = super(SaleOrderLine, self)._prepare_invoice_line()
+        if self.item:
+            res['item'] = self.item
+        return res
