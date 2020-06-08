@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'cisamrein_base', 'purchase'],
+    'depends': ['account', 'cisamrein_base', 'cisamrein_sale', 'cisamrein_purchase'],
 
     # always loaded
     'data': [

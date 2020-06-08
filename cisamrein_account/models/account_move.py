@@ -7,6 +7,8 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     narration = fields.Text(readonly=False)
+    arc_doc = fields.Char(compute="_set_arc_name")
+    cmd_customer_ref = fields.Char(compute="_compute_cmd_customer_ref")
     # signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False,
     #                            attachment=True,
     #                            max_width=1024, max_height=1024)
@@ -22,6 +24,20 @@ class AccountMove(models.Model):
             self.narration = self.company_id.with_context(lang=self.partner_id.lang).note_invoice
         else:
             self.narration = self.company_id.note_invoice
+
+
+    @api.depends("invoice_origin")
+    def _set_arc_name(self):
+        if self.invoice_origin:
+            self.arc_doc = "ARC - {}".format(str(self.invoice_origin).replace("/", "_"))
+
+    @api.depends("invoice_origin")
+    def _compute_cmd_customer_ref(self):
+        if self.invoice_origin:
+            so = self.env['sale.order'].sudo().search([("name", "=", self.invoice_origin)], limit=1)
+            if so:
+                self.cmd_customer_ref = so.cmd_customer_ref
+
 
 class AccountInvoiceLine(models.Model):
     _inherit = "account.move.line"

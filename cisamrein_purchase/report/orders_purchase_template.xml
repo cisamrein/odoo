@@ -30,7 +30,7 @@
                    <span t-field="order_line.ref_supplier"/>
                </td>
            </xpath>
-           <xpath expr="//p[@t-field='o.notes']" position="before">
+           <xpath expr="//p[@t-field='o.notes']" position="after">
                <!-- Add your fields or attributes here -->
                 <div t-if="o.signature_1" name="signature_inherit" class="row mt64 mb64">
                     <div style="margin-right:150px;">
@@ -98,9 +98,11 @@
                    <span t-field="line.ref_supplier"/>
                </td>
            </xpath>
-           <xpath expr="//p[@t-field='o.notes']" position="before">
-                <!-- Add your fields or attributes here -->
-                <div t-if="o.signature_1" name="signature_inherit" class="row mt64 mb64">
+           <xpath expr="//p[@t-field='o.notes']" position="after">
+               <span>Payment condition</span>
+               <p t-field="o.payment_term_id"/>
+               <!-- Add your fields or attributes here -->
+               <div t-if="o.signature_1" name="signature_inherit" class="row mt64 mb64">
                     <div style="margin-right:150px;">
                         <span>
                             <br/>
@@ -130,10 +132,7 @@
                     </div>
                 </div>
             </xpath>
-            <xpath expr="//p[@t-field='o.notes']" position="after">
-                 <span>Payment condition</span>
-                 <p t-field="o.payment_term_id"/>
-            </xpath>
+
        </template>
     </data>
 </odoo>
