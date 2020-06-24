@@ -594,3 +594,8 @@ msgid ""
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgültigen Normen unf Vorschriften festgelegten Anforderungen, bis auf die in dieser Überstimmungserklärung\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgenannten Ausnahmen, Vorbehalte oder Abweichungen, entspricht."
 msgstr ""
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "<strong>Assignment center:</strong>"
+msgstr "<strong>Centrale d'affection:</strong>"

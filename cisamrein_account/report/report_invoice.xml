@@ -51,22 +51,14 @@
                             <p class="m-0" t-field="o.cmd_customer_ref"/>
 				</div>
 			</xpath>
-
-			<!--<xpath expr="//div[@name='origin']" position="replace">-->
-			<!---->
-			<!--</xpath>-->
-			<!--<xpath expr="//div[@id='informations']" position="inside">-->
-				<!--<div class="col-auto mw-100 mb-2" t-if="o.ref" name="reference">-->
-					<!--<strong>Sales person:</strong>-->
-					<!--<p class="m-0" t-field="o.invoice_user_id"/>-->
-				<!--</div>-->
-			<!--</xpath>-->
-			<!--<xpath expr="//div[@id='informations']" position="after">-->
-				<!--<div class="col-auto mw-100 mb-2" t-if="o.invoice_date" name="invoice_date">-->
-					<!--<strong>Invoice Date:</strong>-->
-					<!--<p class="m-0" t-field="o.invoice_date"/>-->
-				<!--</div>-->
-			<!--</xpath>-->
+			<xpath expr="//div[@id='informations']" position="after">
+				<div name="other_informations" class="row mt32 mb32">
+					<div class="col-auto mw-100 mb-2">
+						<strong>Assignment center:</strong>
+						<p class="m-0" t-field="o.assignment_center"/>
+					</div>
+				</div>
+			</xpath>
 		</template>
 	</data>
 </odoo>

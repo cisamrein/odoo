@@ -69,3 +69,13 @@ msgstr "Origine matériel"
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Source:</strong>"
 msgstr "<strong>Origine :</strong>"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__assignment_center
+msgid "Assignment Center"
+msgstr "Centrale d'affection"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<strong>Assignment center:</strong>"
+msgstr "<strong>Centrale d'affection:</strong>"

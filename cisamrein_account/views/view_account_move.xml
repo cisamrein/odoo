@@ -23,8 +23,8 @@
                </xpath>
 
                <xpath expr="//field[@name='ref']" position="after">
-                   <!-- Add your fields or attributes here -->
                    <field name="arc_doc" invisible="1"/>
+                   <field name="assignment_center" invisible="1"/>
                </xpath>
            </field>
        </record>
