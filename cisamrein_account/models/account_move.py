@@ -7,16 +7,9 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     narration = fields.Text(readonly=False)
-    arc_doc = fields.Char(compute="_set_arc_name")
-    cmd_customer_ref = fields.Char(compute="_compute_cmd_customer_ref")
-    # signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False,
-    #                            attachment=True,
-    #                            max_width=1024, max_height=1024)
-    #
-    # signature_2 = fields.Image('Director Signature', help='Signature received through the portal.', copy=False,
-    #                            attachment=True,
-    #                            max_width=1024, max_height=1024)
-    # signed_by_2 = fields.Many2one('res.users', string='Director', help='Name of the person that signed the PO')
+    arc_doc = fields.Char(compute='_set_arc_name')
+    cmd_customer_ref = fields.Char(compute='_compute_cmd_customer_ref')
+    assignment_center = fields.Many2one('res.partner', compute='_compute_cmd_customer_ref')
 
     @api.onchange('partner_id')
     def _set_lang_orders(self):
@@ -37,6 +30,7 @@ class AccountMove(models.Model):
             so = self.env['sale.order'].sudo().search([("name", "=", self.invoice_origin)], limit=1)
             if so:
                 self.cmd_customer_ref = so.cmd_customer_ref
+                self.assignment_center = so.assignment_center
 
 
 class AccountInvoiceLine(models.Model):

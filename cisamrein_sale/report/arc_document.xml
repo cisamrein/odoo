@@ -18,10 +18,18 @@
             </h2>
         </xpath>
         <xpath expr="//div[@t-if='doc.client_order_ref']" position="after">
-            <!-- Add your fields or attributes here -->
             <div t-if="is_arc_forma" class="col-auto mw-100 mb-2">
                 <strong>Customer Reference:</strong>
                 <p class="m-0" t-field="doc.cmd_customer_ref"/>
+            </div>
+        </xpath>
+    
+        <xpath expr="//div[@id='informations']" position="after">
+            <div class="row mt32 mb32" name="additional_information">
+                <div class="col-auto mw-100 mb-2">
+                    <strong>Assignment center:</strong>
+                    <p class="m-0" t-field="doc.assignment_center"/>
+                </div>
             </div>
         </xpath>
     </template>
