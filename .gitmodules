@@ -1,4 +1,0 @@
-[submodule "cisamrein/odoo"]
-	path = cisamrein/odoo
-	url = git@github.com:cisamrein/odoo.git
-	branch = Staging
