@@ -8,7 +8,7 @@
 			<field name="arch" type="xml">
 				<xpath expr="//button[@name='action_draft']" position="after">
 					<button type="object" name="print_arc_document" class="oe_highlight" string="Print ARC"
-							attrs="{'invisible': [('state', 'not in', ('sent','sale'))]}"/>
+					        attrs="{'invisible': [('state', 'not in', ('sent','sale'))]}"/>
 				</xpath>
 				<xpath expr="//field[@name='note']" position="after">
 					<group colspan="12">
@@ -33,24 +33,24 @@
 				<xpath expr="//page[@name='customer_signature']" position="replace">
 					<!-- Add your fields or attributes here -->
 					<page string="Customer Signature" name="customer_signature">
-                            <group>
-								<group>
-									<field name="user_id"/>
-									<field name="signature" widget="image"/>
-
-								</group>
-								<group>
-									<field name="signed_by_2"/>
-									<field name="signature_2" widget="image"/>
-                            	</group>
+						<group>
+							<group>
+								<field name="user_id"/>
+								<field name="signature" widget="image"/>
+							
 							</group>
+							<group>
+								<field name="signed_by_2"/>
+								<field name="signature_2" widget="image"/>
+							</group>
+						</group>
 					</page>
 				</xpath>
 				<xpath expr="//field[@name='client_order_ref']" position="attributes">
 					<!-- Add your fields or attributes here -->
 					<attribute name="string">RQ Reference</attribute>
 				</xpath>
-
+				
 				<xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
 					<!-- Add your fields or attributes here -->
 					<field name="item"/>
@@ -66,21 +66,21 @@
 				</xpath>
 			</field>
 		</record>
-
+		
 		<!-- Inherit Form View to Modify it -->
 		<record id="sale_order_inherit2" model="ir.ui.view">
-		    <field name="name">sale.order.inherit2</field>
-		    <field name="model">sale.order</field>
-		    <field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
-		    <field name="arch" type="xml">
-
-		        <xpath expr="//field[@name='sale_order_template_id']" position="after">
-		            <!-- Add your fields or attributes here -->
-					<field name="assignment_center"/>
-		        </xpath>
-
-		    </field>
+			<field name="name">sale.order.inherit2</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
+			<field name="arch" type="xml">
+				
+				<xpath expr="//field[@name='sale_order_template_id']" position="after">
+					<!-- Add your fields or attributes here -->
+					<field name="assignment_center" required="1"/>
+				</xpath>
+			
+			</field>
 		</record>
-
+	
 	</data>
 </odoo>
