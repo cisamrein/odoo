@@ -18,11 +18,12 @@ class AccountMove(models.Model):
         else:
             self.narration = self.company_id.note_invoice
 
-
     @api.depends("invoice_origin")
     def _set_arc_name(self):
         if self.invoice_origin:
             self.arc_doc = "ARC - {}".format(str(self.invoice_origin).replace("/", "_"))
+        else:
+            self.arc_doc = "ARC - "
 
     @api.depends("invoice_origin")
     def _compute_cmd_customer_ref(self):
@@ -31,6 +32,12 @@ class AccountMove(models.Model):
             if so:
                 self.cmd_customer_ref = so.cmd_customer_ref
                 self.assignment_center = so.assignment_center
+            else:
+                self.cmd_customer_ref = ""
+                self.assignment_center = False
+        else:
+            self.cmd_customer_ref = ""
+            self.assignment_center = False
 
 
 class AccountInvoiceLine(models.Model):
@@ -81,11 +88,7 @@ class AccountInvoiceLine(models.Model):
             product = self.product_id
 
         values = product.description_sale
-        # if product.partner_ref:
-        #     values = product.partner_ref
         if self.journal_id.type == 'purchase':
             if product.description_purchase:
                 values = product.description_purchase
         return values
-
-

@@ -96,7 +96,9 @@
 														<br/>
 													</td>
 													<td colspan="5" class="blue-text" style="border-left-style:dashed;">
-														<!--1-->
+														<span t-field="o.partner_id"/>
+														<span>, </span>
+														<span t-field="o.partner_id"/>
 													</td>
 												
 												</tr>
@@ -115,7 +117,7 @@
 													<td colspan="3" style="border-right-style:dashed;">
 														<span>Autres renseignements</span>
 														<br/>
-														<span style="font-style:italic;">Otder inforamtion</span>
+														<span style="font-style:italic;">Other inforamtion</span>
 														<br/>
 													
 													</td>

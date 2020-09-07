@@ -6,21 +6,21 @@
                 <th name="th_item" class="text-center">
                     <strong>Item</strong>
                 </th>
-                <th name="th_product" class="text-right">Product code</th>
-                <th name="th_internal_ref" class="text-right">Internal Reference</th>
-                <th name="th_customer_ref" class="text-right">Customer Ref</th>
+                <th name="th_product" class="text-center">Product code</th>
+                <th name="th_internal_ref" class="text-center">Internal Reference</th>
+                <th name="th_customer_ref" class="text-center">Customer Ref</th>
             </xpath>
             <xpath expr="//t[@t-if='not line.display_type']/td[@name='td_name']" position="before">
-                <td name="td_item" class="text-right">
+                <td name="td_item" class="text-center">
                     <span t-field="line.item"/>
                 </td>
-                <td name="td_product" class="text-right">
+                <td name="td_product" class="text-center">
                     <span t-field="line.product_id"/>
                 </td>
-                <td name="td_customer_ref" class="text-right">
+                <td name="td_customer_ref" class="text-center">
                     <span t-field="line.ref_int"/>
                 </td>
-                <td name="td_internal_ref" class="text-right">
+                <td name="td_internal_ref" class="text-center">
                     <span t-field="line.customer_reference"/>
                 </td>
             </xpath>
@@ -71,6 +71,25 @@
             <xpath expr="//p[@t-field='doc.note']" position="before">
                 <!-- Add your fields or attributes here -->
                 <span t-field="doc.picking_policy"><br/></span>
+            </xpath>
+            
+            <xpath expr="//th[@name='th_description']" position="replace">
+                <th name="th_description" class="text-center">Description</th>
+            </xpath>
+            <xpath expr="//th[@name='th_quantity']" position="replace">
+                <th name="th_quantity" class="text-center">Quantity</th>
+            </xpath>
+            <xpath expr="//th[@name='th_priceunit']" position="replace">
+                <th name="th_priceunit" class="text-center">Unit Price</th>
+            </xpath>
+            <xpath expr="//th[@name='th_subtotal']" position="replace">
+                <th name="th_subtotal" class="text-center">
+                    <t groups="account.group_show_line_subtotals_tax_excluded">Amount</t>
+                    <t groups="account.group_show_line_subtotals_tax_included">Total Price</t>
+                </th>
+            </xpath>
+            <xpath expr="//th[@name='th_taxes']" position="replace">
+                <th name="th_taxes" class="text-center">Taxes</th>
             </xpath>
         </template>
     </data>

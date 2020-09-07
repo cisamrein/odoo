@@ -9,10 +9,10 @@
                <th name="th_product_id" class="text-center">
                    <strong>Product code</strong>
                </th>
-               <th name="th_internal_ref" class="text-right">
+               <th name="th_internal_ref" class="text-center">
                    <strong>Internal Reference</strong>
                </th>
-               <th name="th_supplier_ref" class="text-right">
+               <th name="th_supplier_ref" class="text-center">
                    <strong>Supplier Reference</strong>
                </th>
            </xpath>
@@ -60,8 +60,16 @@
                     </div>
                 </div>
            </xpath>
+           <xpath expr="//th[@name='th_description']" position="replace">
+              <th name="th_description" class="text-center"><strong>Description</strong></th>
+           </xpath>
+           <xpath expr="//th[@name='th_expected_date']" position="replace">
+              <th name="th_expected_date" class="text-center"><strong>Expected Date</strong></th>
+           </xpath>
+          <xpath expr="//th[@name='th_quantity']" position="replace">
+              <th name="th_quantity" class="text-right"><strong>Qty</strong></th>
+           </xpath>
        </template>
-
         <template id="order_template_inherit" inherit_id="purchase.report_purchaseorder_document">
            <xpath expr="//div[@t-if='o.date_order']" position="after">
                 <div name="incoterms" class="col-3 bm-2">

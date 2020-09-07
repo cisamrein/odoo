@@ -6,16 +6,16 @@
 				<th class="text-left">
 					<span>Item</span>
 				</th>
-				<th class="text-left">
+				<th class="text-center">
 					<span>Product code</span>
 				</th>
-				<th class="text-left">
+				<th class="text-center">
 					<span>Internal reference</span>
 				</th>
-				<th class="text-left">
+				<th class="text-center">
 					<span>Customer reference</span>
 				</th>
-				<th class="text-left">
+				<th class="text-center">
 					<span>Material origin</span>
 				</th>
 			</xpath>
@@ -41,14 +41,14 @@
 			</xpath>
 			<xpath expr="//div[@name='origin']" position="after">
 				<div class="col-auto mw-100 mb-2" name="arc_doc">
-                            <strong>ARC:</strong>
-                            <p class="m-0" t-field="o.arc_doc"/>
+					<strong>ARC:</strong>
+					<p class="m-0" t-field="o.arc_doc"/>
 				</div>
 			</xpath>
 			<xpath expr="//div[@name='customer_code']" position="after">
 				<div class="col-auto mw-100 mb-2" name="cmd_customer_ref">
-                            <strong>Cmd Reference:</strong>
-                            <p class="m-0" t-field="o.cmd_customer_ref"/>
+					<strong>Cmd Reference:</strong>
+					<p class="m-0" t-field="o.cmd_customer_ref"/>
 				</div>
 			</xpath>
 			<xpath expr="//div[@id='informations']" position="after">
@@ -59,6 +59,25 @@
 					</div>
 				</div>
 			</xpath>
+			
+			<xpath expr="//th[@name='th_description']" position="replace">
+				<th name="th_description" class="text-center">
+					<span>Description</span>
+				</th>
+			</xpath>
+			<xpath expr="//th[@name='th_quantity']" position="replace">
+				<th name="th_quantity" class="text-center">
+					<span>Quantity</span>
+				</th>
+			</xpath>
+			<xpath expr="//th[@name='th_priceunit']" position="replace">
+				<th name="th_priceunit" t-attf-class="text-center {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+					<span>Unit
+						Price
+					</span>
+				</th>
+			</xpath>
+			
 		</template>
 	</data>
 </odoo>
