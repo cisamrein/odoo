@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0+e\n"
+"Project-Id-Version: Odoo Server 13.0+e-20200518\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 10:51+0000\n"
-"PO-Revision-Date: 2020-05-26 10:51+0000\n"
+"POT-Creation-Date: 2020-09-08 07:24+0000\n"
+"PO-Revision-Date: 2020-09-08 07:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,12 @@ msgstr ""
 #. module: cisamrein_account
 #: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
 msgid "<span>Customer reference</span>"
-msgstr "Référence client"
+msgstr "<span>Référence client</span>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Description</span>"
+msgstr "<span>Description</span>"
 
 #. module: cisamrein_account
 #: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
@@ -28,7 +33,7 @@ msgstr "<span>Référence interne</span>"
 #. module: cisamrein_account
 #: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
 msgid "<span>Item</span>"
-msgstr ""
+msgstr "<span>Item</span>"
 
 #. module: cisamrein_account
 #: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
@@ -38,12 +43,74 @@ msgstr "<span>Origin matériel</span>"
 #. module: cisamrein_account
 #: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
 msgid "<span>Product code</span>"
-msgstr "Code article"
+msgstr "<span>Code article</span>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<span>Quantity</span>"
+msgstr "<span>Quantité</span>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid ""
+"<span>Unit\n"
+"\t\t\t\t\t\tPrice\n"
+"\t\t\t\t\t</span>"
+msgstr ""
+"<span>Unité\n"
+"\t\t\t\t\t\tPrix\n"
+"\t\t\t\t\t</span>"
+
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<strong>ARC:</strong>"
+msgstr "<strong>ARC:</strong>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<strong>Assignment center:</strong>"
+msgstr "<strong>Centrale d'affection:</strong>"
+
+#. module: cisamrein_account
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
+msgid "<strong>Cmd Reference:</strong>"
+msgstr "<strong>Référence Cmd:</strong>"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__arc_doc
+msgid "Arc Doc"
+msgstr "ARC"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__assignment_center_id
+msgid "Assignment Center"
+msgstr "Centrale d'affection"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__cmd_customer_ref
+msgid "Cmd Customer Ref"
+msgstr "Référence client"
+
+#. module: cisamrein_account
+#: model:ir.model,name:cisamrein_account.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: cisamrein_account
+#: model:ir.model,name:cisamrein_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
 
 #. module: cisamrein_account
 #: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__customer_ref
 msgid "Customer Ref"
 msgstr "Référence client"
+
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__narration
+msgid "Internal Note"
+msgstr "Note interne"
 
 #. module: cisamrein_account
 #: model:ir.model.fields,field_description:cisamrein_account.field_account_move_line__internal_ref
@@ -56,6 +123,11 @@ msgid "Item"
 msgstr ""
 
 #. module: cisamrein_account
+#: model:ir.model,name:cisamrein_account.model_account_move
+msgid "Journal Entries"
+msgstr "Pièces comptables"
+
+#. module: cisamrein_account
 #: model:ir.model,name:cisamrein_account.model_account_move_line
 msgid "Journal Item"
 msgstr "Écriture comptable"
@@ -65,17 +137,13 @@ msgstr "Écriture comptable"
 msgid "Material Origin"
 msgstr "Origine matériel"
 
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "<strong>Source:</strong>"
-msgstr "<strong>Origine :</strong>"
+#. module: cisamrein_account
+#: model:ir.model.fields,field_description:cisamrein_account.field_res_company__note_invoice
+#: model:ir.model.fields,field_description:cisamrein_account.field_res_config_settings__note_invoice
+msgid "Note Invoice"
+msgstr "Note"
 
 #. module: cisamrein_account
-#: model:ir.model.fields,field_description:cisamrein_account.field_account_move__assignment_center
-msgid "Assignment Center"
-msgstr "Centrale d'affection"
-
-#. module: cisamrein_account
-#: model_terms:ir.ui.view,arch_db:cisamrein_account.report_invoice_document
-msgid "<strong>Assignment center:</strong>"
-msgstr "<strong>Centrale d'affection:</strong>"
+#: model_terms:ir.ui.view,arch_db:cisamrein_account.view_settings
+msgid "Terms and conditions"
+msgstr "Termes et conditions"

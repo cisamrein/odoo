@@ -9,7 +9,7 @@ class AccountMove(models.Model):
     narration = fields.Text(readonly=False)
     arc_doc = fields.Char(compute='_set_arc_name')
     cmd_customer_ref = fields.Char(compute='_compute_cmd_customer_ref')
-    assignment_center = fields.Many2one('res.partner', compute='_compute_cmd_customer_ref')
+    assignment_center_id = fields.Many2one('res.partner', compute='_compute_cmd_customer_ref')
 
     @api.onchange('partner_id')
     def _set_lang_orders(self):
@@ -31,13 +31,13 @@ class AccountMove(models.Model):
             so = self.env['sale.order'].sudo().search([("name", "=", self.invoice_origin)], limit=1)
             if so:
                 self.cmd_customer_ref = so.cmd_customer_ref
-                self.assignment_center = so.assignment_center
+                self.assignment_center_id = so.assignment_center_id
             else:
                 self.cmd_customer_ref = ""
-                self.assignment_center = False
+                self.assignment_center_id = False
         else:
             self.cmd_customer_ref = ""
-            self.assignment_center = False
+            self.assignment_center_id = False
 
 
 class AccountInvoiceLine(models.Model):

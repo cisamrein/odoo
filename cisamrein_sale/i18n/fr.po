@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0+e\n"
+"Project-Id-Version: Odoo Server 13.0+e-20200518\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 14:38+0000\n"
-"PO-Revision-Date: 2020-05-25 14:38+0000\n"
+"POT-Creation-Date: 2020-09-08 07:43+0000\n"
+"PO-Revision-Date: 2020-09-08 07:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,7 @@ msgstr "'Déclaration de conformité - %s' % (object.name)"
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid "<span class=\"blue-text\">.051</span>"
 msgstr ""
+
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
 msgid "<span class=\"o_form_label\">Price condition</span>"
@@ -37,11 +38,11 @@ msgstr "<span class=\"o_form_label\">Conditions des prix</span>"
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid ""
-"<span class=\"thin-text\">Etablissement / Plant / Betrieb</span>\n"
+"<span class=\"thin-text\">Etablissement / Plant</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\tCOURBEVOIE\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"thin-text\">France / Frankreich</span>"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"thin-text\">France</span>"
 msgstr ""
 
 #. module: cisamrein_sale
@@ -50,8 +51,6 @@ msgid ""
 "<span class=\"thin-text\">Fournisseur</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"thin-text\">Supplier</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"thin-text\">Lieferant</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -66,10 +65,6 @@ msgid ""
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\treference of tde\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapproved engineering deviations\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-size:16px\">Spezifikation der gelieferten Ware, namentlich die Bezeichnung der genehmigten\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAbweichungen\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -77,7 +72,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid ""
 "<span style=\"font-size:19px;\" class=\"text-center vertical-center\">\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRESPONSABLE QUALITĖ FOURNISSEUR / SUPPLIER QUALITY MANAGER / QUALITÄTSBEAUFTRAGTER DES LIEFERFIRMA\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRESPONSABLE QUALITĖ FOURNISSEUR / SUPPLIER QUALITY MANAGER\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>"
 msgstr ""
 
@@ -100,15 +95,6 @@ msgid ""
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTO STANDARD\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNFL 00-015C&amp;ISO/CEI 17050\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-size:20px; \">ÜBEREINSTIMMUNGSERKLÄRUNG</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"thin-text\">DER VOM LIEFERWERK ENTSPRECHEND DER NORM NFL 00-015C &amp; ISO/CEI\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t17050 ERSTELLT\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWURDE\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -117,24 +103,21 @@ msgstr ""
 msgid ""
 "<span>Autres renseignements</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Otder inforamtion</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Sonstige Angaben</span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Other inforamtion</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
-msgid "<span>Date / Datum</span>"
+msgid "<span>Date</span>"
 msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
 msgid ""
-"<span>Déclaration/Statement/Erklärung</span>\n"
+"<span>Déclaration/Statement</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\tN°:\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"blue-text\">17-1143.051</span>"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tN°:"
 msgstr ""
 
 #. module: cisamrein_sale
@@ -143,14 +126,12 @@ msgid ""
 "<span>Désignation, quantité</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Designation,. quantity</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Bezeichnung, Menge</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
-msgid "<span>Nom et fonction / Name and title / Name und Stellung</span>"
+msgid "<span>Nom et fonction / Name and title</span>"
 msgstr ""
 
 #. module: cisamrein_sale
@@ -159,8 +140,6 @@ msgid ""
 "<span>Numéro de commande ou du marché</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Number of tde order or of tde contract</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Bestell - oder Vertrags Nr.</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -170,8 +149,6 @@ msgid ""
 "<span>Numéro de série / lot ou d’identification</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Serial, batch number or identification number</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Serien – bzw. oder Identifikations-Nr.</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -181,8 +158,6 @@ msgid ""
 "<span>Numéro et date du bordereau de livraison</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Number and date of shipping note</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Nummer und Datum des Lieferscheins</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -202,8 +177,6 @@ msgid ""
 "<span>Raison sociale du client, usine</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span style=\"font-style:italic;\">Customer, trade name, factory</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Kunde / Firma, Werk</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
@@ -213,15 +186,18 @@ msgid ""
 "<span>Référence ou type</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Part number or type</span>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Artikel- Nr. oder Typ</span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
-msgid "<span>Signature / Unterschrift :</span>"
+msgid "<span>Signature</span>"
 msgstr ""
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
+msgid "<strong>Assignment center:</strong>"
+msgstr "<strong>Centrale d'affection:</strong>"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
@@ -264,7 +240,7 @@ msgstr "<strong>Référence interne</strong>"
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_picking_inherit
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
 msgid "<strong>Item</strong>"
-msgstr "<strong>Item</strong>"
+msgstr ""
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
@@ -299,10 +275,22 @@ msgstr "<strong>Référence fournisseur</strong>"
 #. module: cisamrein_sale
 #: model:ir.actions.report,name:cisamrein_sale.arc_doc
 msgid "ARC document"
-msgstr ""
+msgstr "ARC"
 
 #. module: cisamrein_sale
-#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__assignment_center
+#: model:ir.model.fields,help:cisamrein_sale.field_sale_order__assignment_center_id
+#: model:ir.model.fields,help:cisamrein_sale.field_stock_picking__assignment_center_id
+msgid "Add Assignment center on the Order"
+msgstr "Ajouter un centre d'affectation à la commande"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Amount"
+msgstr "Montant"
+
+#. module: cisamrein_sale
+#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__assignment_center_id
+#: model:ir.model.fields,field_description:cisamrein_sale.field_stock_picking__assignment_center_id
 msgid "Assignment Center"
 msgstr "Centrale d'affection"
 
@@ -393,6 +381,11 @@ msgid "Default terms and condition in sales orders forms"
 msgstr "Termes et conditions de ventes par défaut"
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Description"
+msgstr ""
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_product_customer_ref__display_name
 msgid "Display Name"
 msgstr "Référence"
@@ -411,7 +404,6 @@ msgstr "Documents inclus"
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__included_doc
 #: model:ir.model.fields,field_description:cisamrein_sale.field_res_config_settings__included_doc
-#: model:ir.model.fields,field_description:cisamrein_sale.field_sale_order__include_document
 msgid "Included Doc"
 msgstr "Documents inclus"
 
@@ -461,9 +453,7 @@ msgstr "Nom de la personne qui doit signé la commande"
 msgid ""
 "Nombre de feuilles\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\tNumber of pages\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t<br/>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\tSeitenzahl"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\tNumber of pages"
 msgstr ""
 
 #. module: cisamrein_sale
@@ -508,6 +498,11 @@ msgid "Product code"
 msgstr "Code article"
 
 #. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
 msgid "Quotation #"
 msgstr "Devis #"
@@ -548,6 +543,11 @@ msgid "Sales Order Line"
 msgstr "Ligne de bons de commande"
 
 #. module: cisamrein_sale
+#: model:ir.model,name:cisamrein_sale.model_ir_sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: cisamrein_sale
 #: model:ir.model.fields,help:cisamrein_sale.field_sale_order__signature_2
 msgid "Signature received through the portal."
 msgstr "Signature reçue via le portail."
@@ -556,6 +556,11 @@ msgstr "Signature reçue via le portail."
 #: model:ir.model,name:cisamrein_sale.model_stock_move
 msgid "Stock Move"
 msgstr "Stock déplacer"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Taxes"
+msgstr ""
 
 #. module: cisamrein_sale
 #: model:ir.model.fields,field_description:cisamrein_sale.field_res_company__terms_sales
@@ -571,12 +576,23 @@ msgstr "Conditions de vente"
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.res_config_settings
 msgid "This default configuration is applied to any new order created"
-msgstr "Cette configuration est appliqué par défaut aux nouveaux commandes de Ventes"
+msgstr ""
+"Cette configuration est appliqué par défaut aux nouveaux commandes de Ventes"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Total Price"
+msgstr "Prix Total"
 
 #. module: cisamrein_sale
 #: model:ir.model,name:cisamrein_sale.model_stock_picking
 msgid "Transfer"
 msgstr "Transfert"
+
+#. module: cisamrein_sale
+#: model_terms:ir.ui.view,arch_db:cisamrein_sale.report_quotation
+msgid "Unit Price"
+msgstr "Prix Unitaire"
 
 #. module: cisamrein_sale
 #: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
@@ -585,17 +601,6 @@ msgid ""
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tthe listed supplies comply with the contract requirements and that, after completion of testing and\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tverification, they completely satisfy all specified requirement, and applicable standards and regulations."
 msgstr ""
-
-#. module: cisamrein_sale
-#: model_terms:ir.ui.view,arch_db:cisamrein_sale.conformity_statement
-msgid ""
-"Wir erklären, dass die vorliegende Lieferung in Übereinstimmung mit den Vertraganforderungen hergestellt wurde\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tund dass sie, nach Durchfürung aller Kontrollen und Prûfungen, in jeder Hinsicht den in den diesbezüglich\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgültigen Normen unf Vorschriften festgelegten Anforderungen, bis auf die in dieser Überstimmungserklärung\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgenannten Ausnahmen, Vorbehalte oder Abweichungen, entspricht."
-msgstr ""
-
-#. module: cisamrein_sale
-#: model_terms:ir.ui.view,arch_db:cisamrein_sale.arc_document_template
-msgid "<strong>Assignment center:</strong>"
-msgstr "<strong>Centrale d'affection:</strong>"
+"Nous déclarons par la présente, sauf exceptions, réserves ou exemptions énumérées dans la déclaration de conformité, que\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tles fournitures répertoriées sont conformes aux exigences du contrat et que, une fois les tests terminés et\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvérification, ils satisfont complètement à toutes les exigences spécifiées, ainsi qu'aux normes et réglementations applicables."

@@ -28,7 +28,7 @@
             <div class="row mt32 mb32" name="additional_information">
                 <div class="col-auto mw-100 mb-2">
                     <strong>Assignment center:</strong>
-                    <p class="m-0" t-field="doc.assignment_center"/>
+                    <p class="m-0" t-field="doc.assignment_center_id"/>
                 </div>
             </div>
         </xpath>

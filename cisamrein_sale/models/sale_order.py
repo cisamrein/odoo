@@ -13,7 +13,7 @@ class SaleOrder(models.Model):
     signature_2 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False, attachment=True,
                                max_width=1024, max_height=1024)
     signed_by_2 = fields.Many2one('res.users', string='Manager', help='Name of the person that signed the SO')
-    assignment_center = fields.Many2one("res.partner", help="Add Assignment center on the Order")
+    assignment_center_id = fields.Many2one("res.partner", help="Add Assignment center on the Order")
 
     @api.onchange('partner_id')
     def _set_lang_orders(self):

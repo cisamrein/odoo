@@ -98,7 +98,7 @@
 													<td colspan="5" class="blue-text" style="border-left-style:dashed;">
 														<span t-field="o.partner_id"/>
 														<span>, </span>
-														<span t-field="o.partner_id"/>
+														<span t-field="o.assignment_center_id"/>
 													</td>
 												
 												</tr>
@@ -260,6 +260,5 @@
 				</div>
 			</t>
 		</template>
-	
 	</data>
 </odoo>

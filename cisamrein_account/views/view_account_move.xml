@@ -24,7 +24,7 @@
 
                <xpath expr="//field[@name='ref']" position="after">
                    <field name="arc_doc" invisible="1"/>
-                   <field name="assignment_center" invisible="1"/>
+                   <field name="assignment_center_id" invisible="1"/>
                </xpath>
            </field>
        </record>
