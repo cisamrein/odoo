@@ -136,3 +136,6 @@ class PurchaseOrderLine(models.Model):
             template['product_uom'] = product_uom.id
             res.append(template)
         return res
+
+    def print_arc_pdf(self):
+        return self.env.ref('cisamrein_purchase.arc_doc').report_action(self)
