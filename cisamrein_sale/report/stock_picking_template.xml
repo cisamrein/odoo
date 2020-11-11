@@ -33,7 +33,7 @@
 					</th>
 				</t>
 			</xpath>
-			<xpath expr="//td[@t-if='has_serial_number and move_line.lot_name']" position="after">
+			<xpath expr="//td[@t-if='has_serial_number and move_line.lot_id.name']" position="after">
 				<td class="text-center">
 					<span t-field="move_line.move_id.product_default_code"/>
 				</td>
