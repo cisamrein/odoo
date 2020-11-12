@@ -19,5 +19,5 @@ class StockPickingInherit(models.Model):
             elif self.picking_type_id.code == 'PACK':
                 self.name = "PACK_{}/{}.041".format(old_name, self.origin)
             else:
-                self.name = "[}/{}.041".format(old_name, self.origin)
+                self.name = "{}/{}.041".format(old_name, self.origin)
         return res
