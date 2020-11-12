@@ -21,7 +21,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['cisamrein_base', 'cisamrein_product', 'cisamrein_stock', 'cisamrein_sale', 'cisamrein_purchase', 'cisamrein_account',
-                'repair', 'mrp', 'hr'],
+                'repair', 'mrp', 'hr', 'purchase_request', 'purchase_request_tier_validation'],
     'sequence': 1,
     # always loaded
     'data': [

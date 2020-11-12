@@ -20,8 +20,8 @@
 				string="ARC document"
 				model="purchase.order"
 				report_type="qweb-pdf"
-				name="cisamrein_purchase.report_arc_document"
-				file="cisamrein_purchase.report_arc_document"
+				name="cisamrein_purchase.report_arc_purchase"
+				file="cisamrein_purchase.report_arc_purchase"
 				print_report_name="'ARC Document - %s' % (object.name)"
 				paperformat="paper_format_arc"
 		/>
@@ -32,8 +32,10 @@
 		
 		<template id="arc_document_template" inherit_id="purchase.report_purchaseorder_document">
 			<xpath expr="//h2[3]" position="replace">
+				
 				<h2 t-if="o.state in ['purchase', 'done'] and is_arc_forma" class="mt16">
 					Order Aknowledgement Document #
+					<span t-field="o.name"/>
 				</h2>
 				<h2 t-if="o.state in ['purchase', 'done'] and not is_arc_forma">Purchase Order #
 					<span t-field="o.name"/>
@@ -41,11 +43,11 @@
 			</xpath>
 		</template>
 		
-		<template id="report_arc_document">
+		<template id="report_arc_purchase">
 			<t t-call="web.html_container">
 				<t t-set="is_arc_forma" t-value="True"/>
-				<t t-foreach="docs" t-as="doc">
-					<t t-call="cisamrein_purchase.arc_document_template" t-lang="doc.partner_id.lang"/>
+				<t t-foreach="docs" t-as="o">
+					<t t-call="cisamrein_purchase.arc_document_template" t-lang="o.partner_id.lang"/>
 				</t>
 			</t>
 		</template>

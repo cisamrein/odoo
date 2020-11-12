@@ -4,16 +4,21 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0+e-20200518\n"
+"Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 07:41+0000\n"
-"PO-Revision-Date: 2020-09-08 07:41+0000\n"
+"POT-Creation-Date: 2020-11-12 07:36+0000\n"
+"PO-Revision-Date: 2020-11-12 07:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: cisamrein_purchase
+#: model:ir.actions.report,print_report_name:cisamrein_purchase.arc_doc
+msgid "'ARC Document - %s' % (object.name)"
+msgstr ""
 
 #. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.order_template_inherit
@@ -93,6 +98,11 @@ msgid "<strong>Supplier Reference</strong>"
 msgstr "<strong>Réference fournisseur</strong>"
 
 #. module: cisamrein_purchase
+#: model:ir.actions.report,name:cisamrein_purchase.arc_doc
+msgid "ARC document"
+msgstr ""
+
+#. module: cisamrein_purchase
 #: model:ir.model,name:cisamrein_purchase.model_res_company
 msgid "Companies"
 msgstr "Sociétés"
@@ -148,6 +158,11 @@ msgid "Name of the person that signed the PO"
 msgstr "Nom de la personne qui doit signier"
 
 #. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.arc_document_template
+msgid "Order Aknowledgement Document #"
+msgstr "Accusé de Réception de Commande #"
+
+#. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
 msgid "Other Information"
 msgstr "Autres informations"
@@ -163,6 +178,11 @@ msgid "Price List"
 msgstr "Liste de prix"
 
 #. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
+msgid "Print ARC"
+msgstr "Impresion ARC"
+
+#. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
 msgid "Product"
 msgstr "Article"
@@ -176,6 +196,11 @@ msgstr "Code article"
 #: model:ir.model,name:cisamrein_purchase.model_purchase_order
 msgid "Purchase Order"
 msgstr "Commande fournisseur"
+
+#. module: cisamrein_purchase
+#: model_terms:ir.ui.view,arch_db:cisamrein_purchase.arc_document_template
+msgid "Purchase Order #"
+msgstr "Bon de commande #"
 
 #. module: cisamrein_purchase
 #: model:ir.model,name:cisamrein_purchase.model_purchase_order_line
