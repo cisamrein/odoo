@@ -5,6 +5,9 @@ from odoo import models, fields, api
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
+    def print_arc_pdf(self):
+        return self.env.ref('cisamrein_purchase.arc_doc').report_action(self)
+
     notes = fields.Text(readonly=False)
 
     signature_1 = fields.Image('Responsible Signature', help='Signature received through the portal.', copy=False, attachment=True,
@@ -136,3 +139,4 @@ class PurchaseOrderLine(models.Model):
             template['product_uom'] = product_uom.id
             res.append(template)
         return res
+

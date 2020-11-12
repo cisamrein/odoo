@@ -30,5 +30,6 @@
         'views/view_config_settings.xml',
         'views/view_purchase_order.xml',
         'report/orders_purchase_template.xml',
+        'report/arc_purchase.xml',
     ],
 }
