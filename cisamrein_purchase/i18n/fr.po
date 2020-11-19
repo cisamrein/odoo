@@ -180,7 +180,7 @@ msgstr "Liste de prix"
 #. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.purchase_order_forms
 msgid "Print ARC"
-msgstr "Impresion ARC"
+msgstr "Imprimer ARC"
 
 #. module: cisamrein_purchase
 #: model_terms:ir.ui.view,arch_db:cisamrein_purchase.form_list_supplierinfo
